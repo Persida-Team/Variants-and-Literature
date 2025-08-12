@@ -1,0 +1,4663 @@
+{
+    "test": {
+        "variant_1": {
+            "exact_match": "variant_1",
+            "tables": {
+                "test_table_1": {
+                    "variant_1": {}
+                },
+                "test_table_2": {
+                    "variant_1": {
+                        "found_in_rows": [
+                            {
+                                "column_1": "1_1",
+                                "column_2": "variant_1",
+                                "column_3": "1_3",
+                                "column_4": "1_4"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "variant_2": {
+            "exact_match": "variant_2",
+            "tables": {
+                "test_table_1": {
+                    "variant_2": {}
+                },
+                "test_table_2": {
+                    "variant_2": {}
+                }
+            }
+        },
+        "variant_3": {
+            "exact_match": "variant_3",
+            "tables": {
+                "test_table_1": {
+                    "variant_3": {}
+                },
+                "test_table_2": {
+                    "variant_3": {}
+                }
+            }
+        }
+    },
+    "3531492": {
+        "rs3303926": {
+            "exact_match": "rs3303926",
+            "tables": {
+                "pgen.1003150.s001_csv": {
+                    "rs3303926": {}
+                },
+                "pgen.1003150.s002_csv": {
+                    "rs3303926": {}
+                }
+            }
+        },
+        "rs33030926": {
+            "exact_match": "Rs33030926",
+            "tables": {
+                "pgen.1003150.s001_csv": {
+                    "Rs33030926": {}
+                },
+                "pgen.1003150.s002_csv": {
+                    "Rs33030926": {}
+                }
+            }
+        }
+    },
+    "3583143": {
+        "rs6627737": {
+            "exact_match": "rs6627737",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs6627737": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs6627737": {}
+                }
+            }
+        },
+        "rs4874159": {
+            "exact_match": "rs4874159",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs4874159": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs4874159": {}
+                }
+            }
+        },
+        "rs8044555": {
+            "exact_match": "rs8044555",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs8044555": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs8044555": {}
+                }
+            }
+        },
+        "rs11807": {
+            "exact_match": "rs11807",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs11807": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs11807": {}
+                }
+            }
+        },
+        "rs2093169": {
+            "exact_match": "rs2093169",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs2093169": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs2093169": {}
+                }
+            }
+        },
+        "rs6076864": {
+            "exact_match": "rs6076864",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs6076864": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs6076864": {}
+                }
+            }
+        },
+        "rs11227306": {
+            "exact_match": "rs11227306",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs11227306": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs11227306": {}
+                }
+            }
+        },
+        "rs11207272": {
+            "exact_match": "rs11207272",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs11207272": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs11207272": {}
+                }
+            }
+        },
+        "tmVar:c|SUB|C|5|C": {
+            "exact_match": "Cytosine-5 at a C",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "Cytosine-5 at a C": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "Cytosine-5 at a C": {}
+                }
+            }
+        },
+        "rs11763011": {
+            "exact_match": "rs11763011",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs11763011": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs11763011": {}
+                }
+            }
+        },
+        "rs8133866": {
+            "exact_match": "rs8133866",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs8133866": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs8133866": {}
+                }
+            }
+        },
+        "rs11147317": {
+            "exact_match": "rs11147317",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs11147317": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs11147317": {}
+                }
+            }
+        },
+        "rs9467632": {
+            "exact_match": "rs9467632",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs9467632": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs9467632": {}
+                }
+            }
+        },
+        "rs2030731": {
+            "exact_match": "rs2030731",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs2030731": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs2030731": {}
+                }
+            }
+        },
+        "rs12199613": {
+            "exact_match": "rs12199613",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs12199613": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs12199613": {}
+                }
+            }
+        },
+        "rs4755227": {
+            "exact_match": "rs4755227",
+            "tables": {
+                "1471-2164-13-636-S7_csv": {
+                    "rs4755227": {}
+                },
+                "1471-2164-13-636-S8_csv": {
+                    "rs4755227": {}
+                }
+            }
+        }
+    },
+    "3720646": {
+        "rs29019846": {
+            "exact_match": "rs29019846",
+            "tables": {
+                "pone.0069202.s009_csv": {
+                    "rs29019846": {
+                        "found_in_rows": [
+                            {
+                                "snp_name": "Hapmap54981-rs29019846",
+                                "chrome_x": 24,
+                                "snp_loc": 28853585,
+                                "solution": 0.0005893311
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs29013502": {
+            "exact_match": "rs29013502",
+            "tables": {
+                "pone.0069202.s009_csv": {
+                    "rs29013502": {
+                        "found_in_rows": [
+                            {
+                                "snp_name": "Hapmap58887-rs29013502",
+                                "chrome_x": 24,
+                                "snp_loc": 28907154,
+                                "solution": 0.033053491
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "3742662": {
+        "rs117762348": {
+            "exact_match": "rs117762348",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "rs117762348": {}
+                }
+            }
+        },
+        "rs11175518": {
+            "exact_match": "rs11175518",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "rs11175518": {}
+                }
+            }
+        },
+        "rs1491942": {
+            "exact_match": "rs1491942",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "rs1491942": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|90|C": {
+            "exact_match": "C for 90",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "C for 90": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|50|C": {
+            "exact_match": "C for 50",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "C for 50": {}
+                }
+            }
+        },
+        "tmVar:c|SUB|C||A": {
+            "exact_match": "C>A",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "C>A": {}
+                }
+            }
+        },
+        "rs33939927": {
+            "exact_match": "C>T",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "C>T": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|5|C": {
+            "exact_match": "C for 5",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "C for 5": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|3|C": {
+            "exact_match": "C for 3",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "C for 3": {}
+                }
+            }
+        },
+        "rs3761863": {
+            "exact_match": "M2397T",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "M2397T": {}
+                }
+            }
+        },
+        "rs10784486": {
+            "exact_match": "rs10784486",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "rs10784486": {}
+                }
+            }
+        },
+        "rs10784428": {
+            "exact_match": "rs10784428",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "rs10784428": {}
+                }
+            }
+        },
+        "tmVar:c|SUB|A||G": {
+            "exact_match": "A>G",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "A>G": {}
+                }
+            }
+        },
+        "rs1491938": {
+            "exact_match": "rs1491938",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "rs1491938": {}
+                }
+            }
+        },
+        "rs34637584": {
+            "exact_match": "G2019S",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "G2019S": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|15|C": {
+            "exact_match": "C for 15",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "C for 15": {}
+                }
+            }
+        },
+        "rs11564258": {
+            "exact_match": "rs11564258",
+            "tables": {
+                "pone.0070724.s010_csv": {
+                    "rs11564258": {}
+                }
+            }
+        }
+    },
+    "3751083": {
+        "rs16854417": {
+            "exact_match": "rs16854417",
+            "tables": {
+                "1471-2164-14-497-S2_csv": {
+                    "rs16854417": {}
+                },
+                "1471-2164-14-497-S5_csv": {
+                    "rs16854417": {}
+                }
+            }
+        },
+        "rs2607943": {
+            "exact_match": "rs2607943",
+            "tables": {
+                "1471-2164-14-497-S2_csv": {
+                    "rs2607943": {
+                        "found_in_rows": [
+                            {
+                                "Rank": 90,
+                                "Shared_gene": "NINJ2",
+                                "Number_of_genes": 1,
+                                "Number_of_SNPs": 2,
+                                "Component_genes": "SERPINC1",
+                                "SNP_list": "rs1951627;rs2607943"
+                            }
+                        ]
+                    }
+                },
+                "1471-2164-14-497-S5_csv": {
+                    "rs2607943": {}
+                }
+            }
+        }
+    },
+    "3789830": {
+        "rs29079362": {
+            "exact_match": "rs29079362",
+            "tables": {
+                "pgen.1003853.s009_csv": {
+                    "rs29079362": {}
+                },
+                "pgen.1003853.s014_csv": {
+                    "rs29079362": {}
+                }
+            }
+        },
+        "rs29082048": {
+            "exact_match": "rs29082048",
+            "tables": {
+                "pgen.1003853.s009_csv": {
+                    "rs29082048": {}
+                },
+                "pgen.1003853.s014_csv": {
+                    "rs29082048": {}
+                }
+            }
+        },
+        "tmVar:p|SUB|C|57|L": {
+            "exact_match": "C57L",
+            "tables": {
+                "pgen.1003853.s009_csv": {
+                    "C57L": {}
+                },
+                "pgen.1003853.s014_csv": {
+                    "C57L": {
+                        "found_in_rows": [
+                            {
+                                "Sample": "C57L/Jm33687",
+                                "PC1": 0.825434,
+                                "PC2": -0.246352,
+                                "PC3": 0.076391,
+                                "xce allele": " a",
+                                "known": " y"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs29081860": {
+            "exact_match": "rs29081860",
+            "tables": {
+                "pgen.1003853.s009_csv": {
+                    "rs29081860": {}
+                },
+                "pgen.1003853.s014_csv": {
+                    "rs29081860": {}
+                }
+            }
+        },
+        "rs73483921": {
+            "exact_match": "rs73483921",
+            "tables": {
+                "pgen.1003853.s009_csv": {
+                    "rs73483921": {}
+                },
+                "pgen.1003853.s014_csv": {
+                    "rs73483921": {}
+                }
+            }
+        },
+        "rs29082017": {
+            "exact_match": "rs29082017",
+            "tables": {
+                "pgen.1003853.s009_csv": {
+                    "rs29082017": {}
+                },
+                "pgen.1003853.s014_csv": {
+                    "rs29082017": {}
+                }
+            }
+        }
+    },
+    "3848490": {
+        "tmVar:c|SUB|G||A": {
+            "exact_match": "G > A",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "G > A": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "G > A": {}
+                }
+            }
+        },
+        "rs55719896": {
+            "exact_match": "rs55719896",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs55719896": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs55719896": {}
+                }
+            }
+        },
+        "rs2290400": {
+            "exact_match": "rs2290400",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs2290400": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs2290400": {}
+                }
+            }
+        },
+        "tmVar:c|SUB|T||C": {
+            "exact_match": "T > C",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "T > C": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "T > C": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|1|C": {
+            "exact_match": "C for 1",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "C for 1": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "C for 1": {}
+                }
+            }
+        },
+        "tmVar:p|Allele|X|85": {
+            "exact_match": "termination codon at a position 85 bp",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "termination codon at a position 85 bp": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "termination codon at a position 85 bp": {}
+                }
+            }
+        },
+        "rs11078928": {
+            "exact_match": "rs11078928",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs11078928": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs11078928": {}
+                }
+            }
+        },
+        "rs1260326": {
+            "exact_match": "rs1260326",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs1260326": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs1260326": {}
+                }
+            }
+        },
+        "rs2301436": {
+            "exact_match": "rs2301436",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs2301436": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs2301436": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|30|C": {
+            "exact_match": "C for 30",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "C for 30": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "C for 30": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|5|C": {
+            "exact_match": "C for 5",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "C for 5": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "C for 5": {}
+                }
+            }
+        },
+        "rs703842": {
+            "exact_match": "rs703842",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs703842": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs703842": {}
+                }
+            }
+        },
+        "rs1322077": {
+            "exact_match": "rs1322077",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs1322077": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs1322077": {}
+                }
+            }
+        },
+        "tmVar:c|SUB|A||G": {
+            "exact_match": "A > G",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "A > G": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "A > G": {}
+                }
+            }
+        },
+        "rs2014886": {
+            "exact_match": "rs2014886",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs2014886": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs2014886": {}
+                }
+            }
+        },
+        "rs4788084": {
+            "exact_match": "rs4788084",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs4788084": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs4788084": {}
+                }
+            }
+        },
+        "rs886774": {
+            "exact_match": "rs886774",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs886774": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs886774": {}
+                }
+            }
+        },
+        "rs2872507": {
+            "exact_match": "rs2872507",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs2872507": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs2872507": {}
+                }
+            }
+        },
+        "rs10263341": {
+            "exact_match": "rs10263341",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs10263341": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs10263341": {}
+                }
+            }
+        },
+        "rs8049439": {
+            "exact_match": "rs8049439",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs8049439": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs8049439": {}
+                }
+            }
+        },
+        "rs780093": {
+            "exact_match": "rs780093",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs780093": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs780093": {}
+                }
+            }
+        },
+        "rs3764021": {
+            "exact_match": "rs3764021",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs3764021": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs3764021": {}
+                }
+            }
+        },
+        "rs780094": {
+            "exact_match": "rs780094",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs780094": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs780094": {}
+                }
+            }
+        },
+        "tmVar:c|SUB|C||T": {
+            "exact_match": "C > T",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "C > T": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "C > T": {}
+                }
+            }
+        },
+        "rs7216389": {
+            "exact_match": "rs7216389",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs7216389": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs7216389": {}
+                }
+            }
+        },
+        "rs2020854": {
+            "exact_match": "rs2020854",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs2020854": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs2020854": {}
+                }
+            }
+        },
+        "rs2066808": {
+            "exact_match": "rs2066808",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs2066808": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs2066808": {}
+                }
+            }
+        },
+        "rs9303277": {
+            "exact_match": "rs9303277",
+            "tables": {
+                "1471-2164-14-627-S2_csv": {
+                    "rs9303277": {}
+                },
+                "1471-2164-14-627-S5_csv": {
+                    "rs9303277": {}
+                }
+            }
+        }
+    },
+    "3878729": {
+        "rs6504950": {
+            "exact_match": "rs6504950",
+            "tables": {
+                "1471-2148-13-273-S5_csv": {
+                    "rs6504950": {}
+                }
+            }
+        },
+        "rs69041973": {
+            "exact_match": "rs69041973",
+            "tables": {
+                "1471-2148-13-273-S5_csv": {
+                    "rs69041973": {}
+                }
+            }
+        }
+    },
+    "3894192": {
+        "tmVar:p|SUB|Q||H": {
+            "exact_match": "Gln to His",
+            "tables": {
+                "pone.0078644.s010_csv": {
+                    "Gln to His": {}
+                }
+            }
+        },
+        "rs1884444": {
+            "exact_match": "rs1884444",
+            "tables": {
+                "pone.0078644.s010_csv": {
+                    "rs1884444": {}
+                }
+            }
+        }
+    },
+    "3937232": {
+        "rs110041961": {
+            "exact_match": "rs110041961",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs110041961": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs110041961": {}
+                }
+            }
+        },
+        "tmVar:p|SUB|K||R": {
+            "exact_match": "Lysine-to-Arginine",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "Lysine-to-Arginine": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "Lysine-to-Arginine": {}
+                }
+            }
+        },
+        "tmVar:p|SUB|K|113|R": {
+            "exact_match": "p.K113R",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "p.K113R": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "p.K113R": {}
+                }
+            }
+        },
+        "rs135947957": {
+            "exact_match": "rs135947957",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs135947957": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs135947957": {}
+                }
+            }
+        },
+        "rs137525659": {
+            "exact_match": "rs137525659",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs137525659": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs137525659": {}
+                }
+            }
+        },
+        "rs42261960": {
+            "exact_match": "rs42261960",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs42261960": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs42261960": {}
+                }
+            }
+        },
+        "rs43461001": {
+            "exact_match": "rs43461001",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs43461001": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs43461001": {}
+                }
+            }
+        },
+        "rs110220767": {
+            "exact_match": "rs110220767",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs110220767": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs110220767": {}
+                }
+            }
+        },
+        "rs1006737": {
+            "exact_match": "rs1006737",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs1006737": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs1006737": {}
+                }
+            }
+        },
+        "rs41642495": {
+            "exact_match": "rs41642495",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs41642495": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs41642495": {}
+                }
+            }
+        },
+        "rs135123206": {
+            "exact_match": "rs135123206",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs135123206": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs135123206": {}
+                }
+            }
+        },
+        "rs386094483": {
+            "exact_match": "rs386094483",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs386094483": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs386094483": {}
+                }
+            }
+        },
+        "rs382817429": {
+            "exact_match": "rs382817429",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "rs382817429": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "rs382817429": {}
+                }
+            }
+        },
+        "tmVar:p|SUB|S|310|A": {
+            "exact_match": "Ser310Ala",
+            "tables": {
+                "pgen.1004148.s020_csv": {
+                    "Ser310Ala": {}
+                },
+                "pgen.1004148.s021_csv": {
+                    "Ser310Ala": {}
+                }
+            }
+        }
+    },
+    "3978886": {
+        "rs4577050": {
+            "exact_match": "rs4577050",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs4577050": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 15,
+                                "Position (Hg19)": 34528948,
+                                "rsID (dbSNP137)": "rs4577050",
+                                "Gene ": "SLC12A6",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.39,
+                                "Effect": "synonymous-codon,synonymous-codon,synonymous-codon,synonymous-codon,synonymous-codon,synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 360,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 329,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CAGTGCAGCACCGATGGGCAGTGGAGACAAGTGCAATGCAATGGGCCTCCT",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TGAGCAGGTCTTCGAGTTGTACCAACGATGGGAGGCTCAGAACAAGGGCCA",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.68,
+                                "HapMap-CHB": 0.75,
+                                "HapMap-JPT": 0.63,
+                                "HapMap-YRI": 0.32,
+                                "%GC in 250 bp flanking context": 44.9,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs4735258": {
+            "exact_match": "rs4735258",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs4735258": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 8,
+                                "Position (Hg19)": 94935937,
+                                "rsID (dbSNP137)": "rs4735258",
+                                "Gene ": "PDP1",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.5,
+                                "Effect": "utr-variant-3-prime,utr-variant-3-prime,utr-variant-3-prime,utr-variant-3-prime,utr-variant-3-prime",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 2314,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 595,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TGGGAGCCAAGGATGCCCCTGGTGCTGTGCTTCAGGTTGTCTGTTGAGCTT",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TCCTGGATCCGGGGTCTGCTCCAGAATGTCTTCATTATGGACAAACCCGTT",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.4,
+                                "HapMap-CHB": 0.64,
+                                "HapMap-JPT": 0.66,
+                                "HapMap-YRI": 0.46,
+                                "%GC in 250 bp flanking context": 41.7,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs309557": {
+            "exact_match": "rs309557",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs309557": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 5,
+                                "Position (Hg19)": 82834630,
+                                "rsID (dbSNP137)": "rs309557",
+                                "Gene ": "VCAN",
+                                "SNV class": "snp",
+                                "Strand": "-",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.48,
+                                "Effect": "synonymous-codon,synonymous-codon,intron-variant,intron-variant",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 331,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 915,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CATGAAGGGTCTCGCGGGAATCCGGGACGCCATGTGGGAGTTACTTACCAA",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "ATGAGTCCACCAATCACAGCTGGGATGTGCTATGTCGGCGGCTTCTGGAGA",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.49,
+                                "HapMap-CHB": 0.34,
+                                "HapMap-JPT": 0.52,
+                                "HapMap-YRI": 0.5,
+                                "%GC in 250 bp flanking context": 45.5,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs2228611": {
+            "exact_match": "rs2228611",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs2228611": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 19,
+                                "Position (Hg19)": 10267077,
+                                "rsID (dbSNP137)": "rs2228611",
+                                "Gene ": "DNMT1",
+                                "SNV class": "snp",
+                                "Strand": "-",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.46,
+                                "Effect": "synonymous-codon,synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 66,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 175,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "AAGACCTTCCCGCTGTCCTTGGTCATGATGAGCAGCTCCATCTCCTTCTTG",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GGCAGGTGTGTTGTCTTTCTCTAGGATCAGGAACTTGCAGTCCTTGTGCAA",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.47,
+                                "HapMap-CHB": 0.73,
+                                "HapMap-JPT": 0.56,
+                                "HapMap-YRI": 0.48,
+                                "%GC in 250 bp flanking context": 42.7,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs4148973": {
+            "exact_match": "rs4148973",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs4148973": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 21,
+                                "Position (Hg19)": 44323590,
+                                "rsID (dbSNP137)": "rs4148973",
+                                "Gene ": "NDUFV3",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "G/T",
+                                "1000 Genomes project pilot average": 0.48,
+                                "Effect": "synonymous-codon,intron-variant",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 129,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 130,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GCAAGCTGCCCGAGGTCACCAAGGACGTGGAGCGCACGGACGGCGCCCTGC",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CTAGTCAACGCCATGTTCTTCAAGCGTGAGTCGGGGGCGCGTTCAGGGGTC",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.65,
+                                "HapMap-CHB": 0.33,
+                                "HapMap-JPT": 0.38,
+                                "HapMap-YRI": 0.73,
+                                "%GC in 250 bp flanking context": 49.9,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs10373": {
+            "exact_match": "rs10373",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs10373": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 20,
+                                "Position (Hg19)": 6100088,
+                                "rsID (dbSNP137)": "rs10373",
+                                "Gene ": "FERMT1",
+                                "SNV class": "snp",
+                                "Strand": "-",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.49,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 57,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 142,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TCGCACAATAGCCCTTCGGCTGCAATCATTCTTTCCGTCAGAGTCATCATC",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CAGCTGTCGGGCTTTGGAGCTGGAACACTTAAACTGGTCCACAAGAAAGTG",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.54,
+                                "HapMap-CHB": 0.31,
+                                "HapMap-JPT": 0.35,
+                                "HapMap-YRI": 0.58,
+                                "%GC in 250 bp flanking context": 46.7,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs4617548": {
+            "exact_match": "rs4617548",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs4617548": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 11,
+                                "Position (Hg19)": 16133413,
+                                "rsID (dbSNP137)": "rs4617548",
+                                "Gene ": "SOX6",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.47,
+                                "Effect": "synonymous-codon,synonymous-codon,synonymous-codon,synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 190,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 1118,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TCACCAAGTTCTAGCTTCTCATCTGCCTTATTGCAGGCTGTGCTATCGCCT",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TAGCAAAAATCCAATGAAGTACATAAGAGATACAATGCTGTAACAGACAGA",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.52,
+                                "HapMap-CHB": 0.65,
+                                "HapMap-JPT": 0.61,
+                                "HapMap-YRI": 0.51,
+                                "%GC in 250 bp flanking context": 42.1,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs9532292": {
+            "exact_match": "rs9532292",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs9532292": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 13,
+                                "Position (Hg19)": 39433606,
+                                "rsID (dbSNP137)": "rs9532292",
+                                "Gene ": "FREM2",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.4,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 477,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 183,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GCCGGCCGCGCGTTTCCGAGCCATGTTGCTTGTCTGGGCAAATTCCACTTC",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CGCGAGTGACGCACCCGGCCGCGATGCGCTAGAACGCCGGCCCCGCCCCGA",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.29,
+                                "HapMap-CHB": 0.41,
+                                "HapMap-JPT": 0.44,
+                                "HapMap-YRI": 0.54,
+                                "%GC in 250 bp flanking context": 45.9,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs10203363": {
+            "exact_match": "rs10203363",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs10203363": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 2,
+                                "Position (Hg19)": 227896976,
+                                "rsID (dbSNP137)": "rs10203363",
+                                "Gene ": "COL4A4",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.45,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 90,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 100,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GTGCACTTGCAACGGAAACCCAAACCATCATTATCTGTTCTGTGGCTGAGG",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GACACAGACCTGCTCACAGCCCCCATTGTTATCTTTACACGGATTGGTAGC",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.46,
+                                "HapMap-CHB": 0.44,
+                                "HapMap-JPT": 0.36,
+                                "HapMap-YRI": 0.57,
+                                "%GC in 250 bp flanking context": 46.7,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs7300444": {
+            "exact_match": "rs7300444",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs7300444": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 12,
+                                "Position (Hg19)": 993930,
+                                "rsID (dbSNP137)": "rs7300444",
+                                "Gene ": "WNK1",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.44,
+                                "Effect": "synonymous-codon,synonymous-codon,synonymous-codon,synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 246,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 84,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TCTTCTCTTGTCAAGCCTGATCCAAATTTTTGATGTATCTTGGCAGAACTA",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "AAGCCAGTCTTCCAAAGAACTAAAATAATAATAATGAAAAGAACATATTTA",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.46,
+                                "HapMap-CHB": 0.55,
+                                "HapMap-JPT": 0.48,
+                                "HapMap-YRI": 0.28,
+                                "%GC in 250 bp flanking context": 44.9,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs4675": {
+            "exact_match": "rs4675",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs4675": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 22,
+                                "Position (Hg19)": 21141300,
+                                "rsID (dbSNP137)": "rs4675",
+                                "Gene ": "SERPIND1",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.45,
+                                "Effect": "intron-variant,synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 510,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 92,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TTCATGAAGCGGCCAGACCCTCATGAGGAGGCCCTGATGATCCTGAAAGGG",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GCAGATGACCCACCTGGCAGCTGCACCTGGCACCCAGGTGAGGGGGGAAGG",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.46,
+                                "HapMap-CHB": 0.62,
+                                "HapMap-JPT": 0.51,
+                                "HapMap-YRI": 0.57,
+                                "%GC in 250 bp flanking context": 51.3,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs1410592": {
+            "exact_match": "rs1410592",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs1410592": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 1,
+                                "Position (Hg19)": 179520506,
+                                "rsID (dbSNP137)": "rs1410592",
+                                "Gene ": "NPHS2",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.43,
+                                "Effect": "intron-variant,synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 84,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 154,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GTCTCCTTCCTATGCGCTAACGATGCCTCCTACGTCGTGGCCCAGTGGGCG",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GTCATGGATGAGTGGCGGTGTGGCAGTCCCCCTCTACAGGAAGCATCCCGC",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.59,
+                                "HapMap-CHB": 0.62,
+                                "HapMap-JPT": 0.54,
+                                "HapMap-YRI": 0.53,
+                                "%GC in 250 bp flanking context": 48.1,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs2070203": {
+            "exact_match": "rs2070203",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs2070203": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 16,
+                                "Position (Hg19)": 70303580,
+                                "rsID (dbSNP137)": "rs2070203",
+                                "Gene ": "AARS",
+                                "SNV class": "snp",
+                                "Strand": "-",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.46,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 162,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 79,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TACTCGGTGCTGCTGCCTCGAACACTCTTCCAGAGGACGAAAGGCCGGAGC",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CGGGGAGGCTGAGAAGAGACTCCTCCTGGTGGACTTCAGCAGCCAAGCCCT",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.53,
+                                "HapMap-CHB": 0.28,
+                                "HapMap-JPT": 0.51,
+                                "HapMap-YRI": 0.49,
+                                "%GC in 250 bp flanking context": 54.7,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs1381532": {
+            "exact_match": "rs1381532",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs1381532": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 9,
+                                "Position (Hg19)": 100190780,
+                                "rsID (dbSNP137)": "rs1381532",
+                                "Gene ": "TDRD7",
+                                "SNV class": "snp",
+                                "Strand": "-",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.43,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 963,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 192,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CCTGATACCCAGACAGGAGATTCTACCACGTAGTGCCCACTCCATGGCTCC",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CTGGGCCGTCATCAACCCGCATCTCCCATAAGGCAACTGTTCATAGTAACT",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.48,
+                                "HapMap-CHB": 0.59,
+                                "HapMap-JPT": 0.5,
+                                "HapMap-YRI": 0.58,
+                                "%GC in 250 bp flanking context": 42.7,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs497692": {
+            "exact_match": "rs497692",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs497692": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 2,
+                                "Position (Hg19)": 169789016,
+                                "rsID (dbSNP137)": "rs497692",
+                                "Gene ": "ABCB11",
+                                "SNV class": "snp",
+                                "Strand": "-",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.48,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 542,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 290,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TCTCCTCAGGCCCCAGCAGACGGTCCCGTGTTGTGGCTGCAGGACGTCCAG",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GTGGAACGACCTGGACTACATGGACTCCCGGAGGGACTTCACGTTCAACAA",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.55,
+                                "HapMap-CHB": 0.65,
+                                "HapMap-JPT": 0.51,
+                                "HapMap-YRI": 0.22,
+                                "%GC in 250 bp flanking context": 45.5,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs1037256": {
+            "exact_match": "rs1037256",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs1037256": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 17,
+                                "Position (Hg19)": 71197748,
+                                "rsID (dbSNP137)": "rs1037256",
+                                "Gene ": "COG1",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.44,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 309,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 455,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CACATGGCCCACCTTGTCCACAGCCTTGGCCACACAACGCACATGGAACCT",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TCCGGCTGAAGTAAATGCTGTCCAGGACCTAACAGGAAGAAAAAATCACCT",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.5,
+                                "HapMap-CHB": 0.67,
+                                "HapMap-JPT": 0.65,
+                                "HapMap-YRI": 0.56,
+                                "%GC in 250 bp flanking context": 53.1,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs17548783": {
+            "exact_match": "rs17548783",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs17548783": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 7,
+                                "Position (Hg19)": 48450157,
+                                "rsID (dbSNP137)": "rs17548783",
+                                "Gene ": "ABCA13",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.48,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 60,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 97,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GCTCACCGGGAACGAAAGCAAGATTTTTCTGCCTTTAAGCAGACAGACAGT",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TGAGATGAAGGTTAAAATATCACCACAGCTCCTCCTGGCCATGCACCGTTT",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.46,
+                                "HapMap-CHB": 0.72,
+                                "HapMap-JPT": 0.53,
+                                "HapMap-YRI": 0.48,
+                                "%GC in 250 bp flanking context": 52.5,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs10883099": {
+            "exact_match": "rs10883099",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs10883099": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 10,
+                                "Position (Hg19)": 100219314,
+                                "rsID (dbSNP137)": "rs10883099",
+                                "Gene ": "HPSE2",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.46,
+                                "Effect": "utr-variant-3-prime,utr-variant-3-prime,utr-variant-3-prime,utr-variant-3-prime",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 52,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 60,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GGCCAGGTCTCGAGCACGGGAAGGTGGGTGAAGCTGGCCTCCTTAGCGTCG",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GACTGCTCGGAAGCGGGACCGGGGGCCCTGGGCCTGGAAGCTGTCTCGGAC",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.52,
+                                "HapMap-CHB": 0.52,
+                                "HapMap-JPT": 0.53,
+                                "HapMap-YRI": 0.62,
+                                "%GC in 250 bp flanking context": 51.3,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs4688963": {
+            "exact_match": "rs4688963",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs4688963": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 4,
+                                "Position (Hg19)": 5749904,
+                                "rsID (dbSNP137)": "rs4688963",
+                                "Gene ": "EVC",
+                                "SNV class": "snp",
+                                "Strand": "-",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.46,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 90,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 57,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "ATTCTGTTAATTTCAAGAACATTCTACAGTGGGAGTCACCTGCTTTTGCCA",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "AAAGGGAACCTGACTTTCACAGCTCAGTACCTAAGGTGGGTCTGGCCTCAC",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.33,
+                                "HapMap-CHB": 0.65,
+                                "HapMap-JPT": 0.67,
+                                "HapMap-YRI": 0.52,
+                                "%GC in 250 bp flanking context": 44.1,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs2229546": {
+            "exact_match": "rs2229546",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs2229546": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 1,
+                                "Position (Hg19)": 67861520,
+                                "rsID (dbSNP137)": "rs2229546",
+                                "Gene ": "IL12RB2",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/C",
+                                "1000 Genomes project pilot average": 0.45,
+                                "Effect": "synonymous-codon,utr-variant-3-prime,synonymous-codon,utr-variant-3-prime,nc-transcript-variant,nc-transcript-variant",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 620,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 677,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CAAAAAGATGAAGAAAAAATGGAAATTCAGGAGATCCAACTGAAAGAGGCC",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CAAGCACATTGCTGAAGATGCCGACCGCAAATATGAAGAGGTCAGATCCTG",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.64,
+                                "HapMap-CHB": 0.36,
+                                "HapMap-JPT": 0.44,
+                                "HapMap-YRI": 0.58,
+                                "%GC in 250 bp flanking context": 54.7,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs9962023": {
+            "exact_match": "rs9962023",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs9962023": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 18,
+                                "Position (Hg19)": 21413869,
+                                "rsID (dbSNP137)": "rs9962023",
+                                "Gene ": "LAMA3",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.34,
+                                "Effect": "synonymous-codon,synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 565,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 231,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TCTGAGGCGCGCCCTGCCCGCGCTGCGCCCCTGCATTCCCCGCTTCGTCCC",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CGCTGTCCACGGCGCCGGCCTCCCGCGAGCAGCCCGCAGCGGGCCCAGCGG",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.67,
+                                "HapMap-CHB": 0.81,
+                                "HapMap-JPT": 0.75,
+                                "HapMap-YRI": 0.51,
+                                "%GC in 250 bp flanking context": 48.7,
+                                "Unnamed: 21": "N.B. Included in candidates and final panel due to unsuitability of all other Chr18 candidates."
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs2942": {
+            "exact_match": "rs2942",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs2942": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 6,
+                                "Position (Hg19)": 146755140,
+                                "rsID (dbSNP137)": "rs2942",
+                                "Gene ": "GRM1",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.48,
+                                "Effect": "synonymous-codon,utr-variant-3-prime",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 176,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 184,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CAGGGGTTGGGGTGTTGAGCGGGAGGCACTGGTGGCGGGGGTCCCTCGCCG",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GTGTAGGTCGTTGATGACGGCAGCGGAGCGGGGCAGGCACAAGTAGCCCCC",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.54,
+                                "HapMap-CHB": 0.49,
+                                "HapMap-JPT": 0.55,
+                                "HapMap-YRI": 0.47,
+                                "%GC in 250 bp flanking context": 54.3,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs2819561": {
+            "exact_match": "rs2819561",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs2819561": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 3,
+                                "Position (Hg19)": 4403767,
+                                "rsID (dbSNP137)": "rs2819561",
+                                "Gene ": "SUMF1",
+                                "SNV class": "snp",
+                                "Strand": "-",
+                                "Alleles": "C/T",
+                                "1000 Genomes project pilot average": 0.33,
+                                "Effect": "utr-variant-3-prime,utr-variant-3-prime,utr-variant-3-prime",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 149,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 50,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CAAAGAGCTGAAAAGTCTAATTCACTGTCATCTTTGTGACTTTTTTCTTTG",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "GTCTGCTTCTGTTGAGGAAAAAATTTGGAAGCTTTCAGTTTCCTAGCCAAC",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.56,
+                                "HapMap-CHB": 0.73,
+                                "HapMap-JPT": 0.73,
+                                "HapMap-YRI": 0.72,
+                                "%GC in 250 bp flanking context": 51.7,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rs2297995": {
+            "exact_match": "rs2297995",
+            "tables": {
+                "gm492-S1_csv": {
+                    "rs2297995": {
+                        "found_in_rows": [
+                            {
+                                "In optimized panel?": 1,
+                                "Chromosome": 14,
+                                "Position (Hg19)": 50769717,
+                                "rsID (dbSNP137)": "rs2297995",
+                                "Gene ": "L2HGDH",
+                                "SNV class": "snp",
+                                "Strand": "+",
+                                "Alleles": "A/G",
+                                "1000 Genomes project pilot average": 0.43,
+                                "Effect": "synonymous-codon",
+                                "OMIM/OMIA": 0,
+                                "5' Distance of Flanking SNP GMAF >=0.01": 262,
+                                "3' Distance of Flanking SNP GMAF >=0.01": 142,
+                                "5' Flanking (50bp padding of reference allele of SNV [right terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "CAGCATGGGAGCCAGCCTTCTAACAGCTACCCTTCCATCATAAGTGACTCT",
+                                "3' Flanking (50bp padding of ref allele of SNV [left terminus]). Repeats are masked in lc, according to UCSC table browser based on RepeatMasker": "TTCTGCCCTTGAGGACCTGCGAAATCCAGAACAAAGCACATCAGAAAAAGG",
+                                "Repeats": NaN,
+                                "HapMap-CEU": 0.55,
+                                "HapMap-CHB": 0.65,
+                                "HapMap-JPT": 0.67,
+                                "HapMap-YRI": 0.59,
+                                "%GC in 250 bp flanking context": 42.9,
+                                "Unnamed: 21": NaN
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "4038470": {
+        "rs4649771": {
+            "exact_match": "rs4649771",
+            "tables": {
+                "pgen.1004367.s012_csv": {
+                    "rs4649771": {}
+                },
+                "pgen.1004367.s013_csv": {
+                    "rs4649771": {}
+                },
+                "pgen.1004367.s014_csv": {
+                    "rs4649771": {}
+                }
+            }
+        },
+        "rs3842756": {
+            "exact_match": "rs3842756",
+            "tables": {
+                "pgen.1004367.s012_csv": {
+                    "rs3842756": {}
+                },
+                "pgen.1004367.s013_csv": {
+                    "rs3842756": {}
+                },
+                "pgen.1004367.s014_csv": {
+                    "rs3842756": {}
+                }
+            }
+        },
+        "rs2476601": {
+            "exact_match": "rs2476601",
+            "tables": {
+                "pgen.1004367.s012_csv": {
+                    "rs2476601": {}
+                },
+                "pgen.1004367.s013_csv": {
+                    "rs2476601": {}
+                },
+                "pgen.1004367.s014_csv": {
+                    "rs2476601": {}
+                }
+            }
+        },
+        "rs3842753": {
+            "exact_match": "rs3842753",
+            "tables": {
+                "pgen.1004367.s012_csv": {
+                    "rs3842753": {}
+                },
+                "pgen.1004367.s013_csv": {
+                    "rs3842753": {}
+                },
+                "pgen.1004367.s014_csv": {
+                    "rs3842753": {}
+                }
+            }
+        },
+        "rs689": {
+            "exact_match": "rs689",
+            "tables": {
+                "pgen.1004367.s012_csv": {
+                    "rs689": {}
+                },
+                "pgen.1004367.s013_csv": {
+                    "rs689": {}
+                },
+                "pgen.1004367.s014_csv": {
+                    "rs689": {}
+                }
+            }
+        }
+    },
+    "4046698": {
+        "tmVar:c|FOR|1|C": {
+            "exact_match": "C for 1",
+            "tables": {
+                "12864_2013_5441_MOESM2_ESM_csv": {
+                    "C for 1": {}
+                },
+                "12864_2013_5441_MOESM3_ESM_csv": {
+                    "C for 1": {}
+                }
+            }
+        },
+        "rs7825750": {
+            "exact_match": "rs7825750",
+            "tables": {
+                "12864_2013_5441_MOESM2_ESM_csv": {
+                    "rs7825750": {}
+                },
+                "12864_2013_5441_MOESM3_ESM_csv": {
+                    "rs7825750": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|30|C": {
+            "exact_match": "C for 30",
+            "tables": {
+                "12864_2013_5441_MOESM2_ESM_csv": {
+                    "C for 30": {}
+                },
+                "12864_2013_5441_MOESM3_ESM_csv": {
+                    "C for 30": {}
+                }
+            }
+        },
+        "rs4300027": {
+            "exact_match": "rs4300027",
+            "tables": {
+                "12864_2013_5441_MOESM2_ESM_csv": {
+                    "rs4300027": {}
+                },
+                "12864_2013_5441_MOESM3_ESM_csv": {
+                    "rs4300027": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|40|C": {
+            "exact_match": "C for 40",
+            "tables": {
+                "12864_2013_5441_MOESM2_ESM_csv": {
+                    "C for 40": {}
+                },
+                "12864_2013_5441_MOESM3_ESM_csv": {
+                    "C for 40": {}
+                }
+            }
+        },
+        "rs4512398": {
+            "exact_match": "rs4512398",
+            "tables": {
+                "12864_2013_5441_MOESM2_ESM_csv": {
+                    "rs4512398": {}
+                },
+                "12864_2013_5441_MOESM3_ESM_csv": {
+                    "rs4512398": {}
+                }
+            }
+        }
+    },
+    "4117965": {
+        "rs17382102": {
+            "exact_match": "rs17382102",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs17382102": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs17382102": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs17382102": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs17382102": {}
+                }
+            }
+        },
+        "rs7825750": {
+            "exact_match": "rs7825750",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs7825750": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs7825750": {
+                        "found_in_column_header": {
+                            "rs7825750": [
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "CT",
+                                NaN
+                            ]
+                        }
+                    }
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs7825750": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs7825750": {}
+                }
+            }
+        },
+        "rs2738045": {
+            "exact_match": "rs2738045",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs2738045": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs2738045": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs2738045": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs2738045": {}
+                }
+            }
+        },
+        "rs2978951": {
+            "exact_match": "rs2978951",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs2978951": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs2978951": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs2978951": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs2978951": {}
+                }
+            }
+        },
+        "rs2702910": {
+            "exact_match": "rs2702910",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs2702910": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs2702910": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs2702910": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs2702910": {}
+                }
+            }
+        },
+        "rs7826487": {
+            "exact_match": "rs7826487",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs7826487": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs7826487": {
+                        "found_in_column_header": {
+                            "rs7826487": [
+                                "GG",
+                                "GG",
+                                "GG",
+                                "GG",
+                                "GG",
+                                "GG",
+                                "GG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AG",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AG",
+                                NaN
+                            ]
+                        }
+                    }
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs7826487": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs7826487": {}
+                }
+            }
+        },
+        "rs2738046": {
+            "exact_match": "rs2738046",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs2738046": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs2738046": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs2738046": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs2738046": {}
+                }
+            }
+        },
+        "rs62487514": {
+            "exact_match": "rs62487514",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs62487514": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs62487514": {
+                        "found_in_column_header": {
+                            "rs62487514": [
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AA",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "AC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                NaN
+                            ]
+                        }
+                    }
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs62487514": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs62487514": {}
+                }
+            }
+        },
+        "rs2738048": {
+            "exact_match": "rs2738048",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs2738048": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs2738048": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs2738048": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs2738048": {}
+                }
+            }
+        },
+        "rs4300027": {
+            "exact_match": "rs4300027",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs4300027": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs4300027": {
+                        "found_in_column_header": {
+                            "rs4300027": [
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CT",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CT",
+                                "CT",
+                                "CC",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CC",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "CT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "TT",
+                                "CT",
+                                NaN
+                            ]
+                        }
+                    }
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs4300027": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs4300027": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|3|C": {
+            "exact_match": "C for 3",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "C for 3": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "C for 3": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "C for 3": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "C for 3": {}
+                }
+            }
+        },
+        "rs4512398": {
+            "exact_match": "rs4512398",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "rs4512398": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "rs4512398": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "rs4512398": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "rs4512398": {}
+                }
+            }
+        },
+        "tmVar:c|FOR|30|C": {
+            "exact_match": "C for 30",
+            "tables": {
+                "12864_2014_6306_MOESM3_ESM_csv": {
+                    "C for 30": {}
+                },
+                "12864_2014_6306_MOESM4_ESM_csv": {
+                    "C for 30": {}
+                },
+                "12864_2014_6306_MOESM5_ESM_csv": {
+                    "C for 30": {}
+                },
+                "12864_2014_6306_MOESM6_ESM_csv": {
+                    "C for 30": {}
+                }
+            }
+        }
+    }
+}

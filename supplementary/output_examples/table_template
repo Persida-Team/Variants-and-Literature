@@ -1,0 +1,30 @@
+{
+    "PMCXXXXXXX": {
+        "supplementary_material_name_and_extension": {
+            "type": "table",
+            "contents": [
+                {
+                    "column 1 value": "column 1 row 1 value",
+                    "column 2 value": "column 2 row 1 value",
+                    "column 3 value": "column 3 row 1 value",
+                    "column 4 value": "column 4 row 1 value",
+                    "column 5 value": "column 5 row 1 value"
+                },
+                {
+                    "column 1 value": "column 1 row 2 value",
+                    "column 2 value": "column 2 row 2 value",
+                    "column 3 value": "column 3 row 2 value",
+                    "column 4 value": "column 4 row 2 value",
+                    "column 5 value": "column 5 row 2 value"
+                },
+                {
+                    "column 1 value": "column 1 row 3 value",
+                    "column 2 value": "column 2 row 3 value",
+                    "column 3 value": "column 3 row 3 value",
+                    "column 4 value": "column 4 row 3 value",
+                    "column 5 value": "column 5 row 3 value"
+                }
+            ]
+        }
+    }
+}
