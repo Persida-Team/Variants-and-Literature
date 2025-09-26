@@ -1,0 +1,125 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "standard": {
+            "format": "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+        }
+    },
+    "handlers": {
+        "supplementary_file_handler_error": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "ERROR",
+            "filename": "/home/novak/Clingen/pipeline_logs/supplementary/ERROR.log",
+            "mode": "a"
+        },
+        "supplementary_file_handler_info": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "INFO",
+            "filename": "/home/novak/Clingen/pipeline_logs/supplementary/INFO.log",
+            "mode": "a"
+        },
+        "parsing_file_handler_error": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "ERROR",
+            "filename": "/home/novak/Clingen/pipeline_logs/parsing/ERROR.log",
+            "mode": "a"
+        },
+        "parsing_file_handler_info": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "INFO",
+            "filename": "/home/novak/Clingen/pipeline_logs/parsing/INFO.log",
+            "mode": "a"
+        },
+        "variant_search_file_handler_error": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "ERROR",
+            "filename": "/home/novak/Clingen/pipeline_logs/variant_search/ERROR.log",
+            "mode": "a"
+        },
+        "variant_search_file_handler_info": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "INFO",
+            "filename": "/home/novak/Clingen/pipeline_logs/variant_search/INFO.log",
+            "mode": "a"
+        },
+        "w3c_file_handler_error": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "ERROR",
+            "filename": "/home/novak/Clingen/pipeline_logs/w3c/ERROR.log",
+            "mode": "a"
+        },
+        "w3c_file_handler_info": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "INFO",
+            "filename": "/home/novak/Clingen/pipeline_logs/w3c/INFO.log",
+            "mode": "a"
+        }
+    },
+    "loggers": {
+        "supplementary_error_logger": {
+            "handlers": [
+                "supplementary_file_handler_error"
+            ],
+            "level": "ERROR",
+            "propagate": true
+        },
+        "supplementary_info_logger": {
+            "handlers": [
+                "supplementary_file_handler_info"
+            ],
+            "level": "INFO",
+            "propagate": false
+        },
+        "parsing_error_logger": {
+            "handlers": [
+                "parsing_file_handler_error"
+            ],
+            "level": "ERROR",
+            "propagate": true
+        },
+        "parsing_info_logger": {
+            "handlers": [
+                "parsing_file_handler_info"
+            ],
+            "level": "INFO",
+            "propagate": false
+        },
+        "variant_search_error_logger": {
+            "handlers": [
+                "variant_search_file_handler_error"
+            ],
+            "level": "ERROR",
+            "propagate": true
+        },
+        "variant_search_info_logger": {
+            "handlers": [
+                "variant_search_file_handler_info"
+            ],
+            "level": "INFO",
+            "propagate": false
+        },
+        "w3c_error_logger": {
+            "handlers": [
+                "w3c_file_handler_error"
+            ],
+            "level": "ERROR",
+            "propagate": true
+        },
+        "w3c_info_logger": {
+            "handlers": [
+                "w3c_file_handler_info"
+            ],
+            "level": "INFO",
+            "propagate": false
+        }
+    }
+}
