@@ -3,7 +3,10 @@ import json
 import os
 import re
 from typing import Any
-from utils.logging.logging_setup import supplementary_error_logger, supplementary_info_logger
+from utils.logging.logging_setup import (
+    supplementary_error_logger,
+    supplementary_info_logger,
+)
 
 PATTERNS = [
     re.compile("[\s]CA[0-9]+"),
@@ -48,7 +51,9 @@ def save_json(data: Any, file_path: str) -> None:
             json.dump(data, outfile, indent=4)
         supplementary_info_logger.info(f"JSON '{file_path}' saved successfully")
     except Exception as e:
-        supplementary_error_logger.error(f"An error occurred while saving the JSON file: {str(e)}", exc_info=True)
+        supplementary_error_logger.error(
+            f"An error occurred while saving the JSON file: {str(e)}", exc_info=True
+        )
         raise Exception(f"An error occurred while saving the JSON file. ")
 
 
@@ -71,7 +76,9 @@ def load_json(file_path: str) -> Any:
         supplementary_info_logger.info(f"JSON '{file_path}' loaded successfully. ")
         return data
     except Exception as e:
-        supplementary_error_logger.error(f"An error occurred while loading the JSON file: {str(e)}", exc_info=True)
+        supplementary_error_logger.error(
+            f"An error occurred while loading the JSON file: {str(e)}", exc_info=True
+        )
         raise Exception(f"An error occurred while loading the JSON file. ")
 
 
@@ -92,7 +99,9 @@ def create_directory(destination: str) -> None:
         os.makedirs(destination)
         supplementary_info_logger.info(f"Directory '{destination}' is created.")
     except Exception as e:
-        supplementary_error_logger.error(f"Failed to create directory '{destination}': {str(e)}.", exc_info=True)
+        supplementary_error_logger.error(
+            f"Failed to create directory '{destination}': {str(e)}.", exc_info=True
+        )
         raise Exception(f"Failed to create directory '{destination}'.")
 
 
@@ -270,7 +279,9 @@ def get_files(outputs_folder: str) -> dict:
                 res[folder].append(filename)
         return res
     except Exception as e:
-        supplementary_error_logger.error(f"Error occurred while getting files: {e}", exc_info=True)
+        supplementary_error_logger.error(
+            f"Error occurred while getting files: {e}", exc_info=True
+        )
         return {}
 
 
@@ -300,14 +311,18 @@ def find_variants_from_supplementary(input_folder: str, output_folder: str) -> N
                     result.result()
                 except FileNotFoundError as e:
                     supplementary_error_logger.error(
-                        f"File not found error occurred while processing file: {str(e)}", exc_info=True
+                        f"File not found error occurred while processing file: {str(e)}",
+                        exc_info=True,
                     )
                 except json.JSONDecodeError as e:
                     supplementary_error_logger.error(
-                        f"JSON decoding error occurred while processing file: {str(e)}", exc_info=True
+                        f"JSON decoding error occurred while processing file: {str(e)}",
+                        exc_info=True,
                     )
                 except Exception as e:
-                    supplementary_error_logger.error(f"Error occurred while processing file: {str(e)}", exc_info=True)
+                    supplementary_error_logger.error(
+                        f"Error occurred while processing file: {str(e)}", exc_info=True
+                    )
         # for file in files:
         #     search_variants_and_save(link, file, destination)
 

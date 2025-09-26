@@ -4,7 +4,11 @@ import pandas as pd
 
 from supplementary.output_formatters.pandas_formatter import transform_table
 from supplementary.readers.reader_interface import INPUT_TYPE, FormatReader
-from supplementary.utils.data_fetching import get_material_name, get_pmcid, get_extension
+from supplementary.utils.data_fetching import (
+    get_material_name,
+    get_pmcid,
+    get_extension,
+)
 from supplementary.utils.result_saver import get_output_type, save
 
 from utils.logging.logging_setup import supplementary_error_logger
@@ -35,7 +39,9 @@ class CSVFormatReader(FormatReader):
             return None
         except pd.errors.ParserError as e:
             if "Buffer overflow caught" in str(e):
-                supplementary_error_logger.error("%s | %s", source, str(e), exc_info=True)
+                supplementary_error_logger.error(
+                    "%s | %s", source, str(e), exc_info=True
+                )
                 return None
             # if not Buffer overflow error, then try to use a different separator
             if type == INPUT_TYPE.BYTES:
@@ -44,13 +50,17 @@ class CSVFormatReader(FormatReader):
                 try:
                     df = pd.read_csv(csv_file, sep=separator)
                 except pd.errors.EmptyDataError as e:
-                    supplementary_error_logger.error("%s | %s", source, str(e), exc_info=True)
+                    supplementary_error_logger.error(
+                        "%s | %s", source, str(e), exc_info=True
+                    )
                     return None
                 # TODO
                 # what happens if we try read_csv(csv_file, sep = separator)?
                 # catch pandas.errors.EmptyDataError: No columns to parse from file
             else:
-                supplementary_error_logger.error("%s | %s", source, str(e), exc_info=True)
+                supplementary_error_logger.error(
+                    "%s | %s", source, str(e), exc_info=True
+                )
                 return None
 
         to_save = transform_table(df)

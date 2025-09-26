@@ -9,7 +9,6 @@ from supplementary.utils.result_saver import get_output_type, save
 from utils.logging.logging_setup import supplementary_error_logger
 
 
-
 class IMAGEFormatReader(FormatReader):
     def read_bytes(
         self,

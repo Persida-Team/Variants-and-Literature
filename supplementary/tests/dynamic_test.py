@@ -1,7 +1,10 @@
 import json
-import utils.logging.error_templates
+import utils.logging.error_templates as error_templates
 from .test_interface import Test
-from utils.logging.logging_setup import supplementary_error_logger, supplementary_info_logger
+from utils.logging.logging_setup import (
+    supplementary_error_logger,
+    supplementary_info_logger,
+)
 from .tests import (
     CSVTest,
     DOCTest,
@@ -64,7 +67,9 @@ def run_on_all_from_dict(pmc_id: str, pmc_dict: dict[str, list[str]], output_dir
                 result = current_test.run_test([file])
             except Exception as e:
                 source = f"{pmc_id}_{filename}_{extension}"
-                supplementary_error_logger.error("%s | %s", source, str(e), exc_info=True)
+                supplementary_error_logger.error(
+                    "%s | %s", source, str(e), exc_info=True
+                )
             if result:
                 saved_files.append(f"{pmc_id}_{filename}_{extension}")
                 with open(
@@ -106,7 +111,9 @@ def run_on_all_from_dict_and_return(
                 result = current_test.run_test([file])
             except Exception as e:
                 source = f"{pmc_id}_{filename}_{extension}"
-                supplementary_error_logger.error("%s | %s", source, str(e), exc_info=True)
+                supplementary_error_logger.error(
+                    "%s | %s", source, str(e), exc_info=True
+                )
             if result:
                 result_dict[f"{pmc_id}_{filename}_{extension}"] = result
                 saved_files.append(f"{pmc_id}_{filename}_{extension}")

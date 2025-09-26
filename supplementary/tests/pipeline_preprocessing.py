@@ -11,9 +11,10 @@ import xml.etree.ElementTree as ET
 from collections import defaultdict
 
 import requests
-from .dynamic_test import run_on_all_from_dict, run_on_all_from_dict_and_return
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
+
+from .dynamic_test import run_on_all_from_dict, run_on_all_from_dict_and_return
 
 
 def group_files(directory: str) -> dict[str, list[str]]:
@@ -125,7 +126,6 @@ def parse_and_save_supplementary_for_pmc_id(
                 directory, pmc_id, "parsed_supplementary"
             )
             output_directory = os.path.join(output_directory_root, pmc_id)
-
             unpack_tar_gz(f"{directory}/{pmc_id}.tar.gz", f"{directory}/{pmc_id}")
             grouped_files = group_files(f"{directory}/{pmc_id}/{pmc_id}/")
             os.makedirs(tempfile_save_directory, exist_ok=True)
@@ -135,16 +135,14 @@ def parse_and_save_supplementary_for_pmc_id(
             shutil.copytree(tempfile_save_directory, output_directory)
 
 
-
-def parse_supplementary_for_pmc_id(
-    pmc_id: str
-) -> None:
+def parse_supplementary_for_pmc_id(pmc_id: str) -> None:
     with tempfile.TemporaryDirectory() as directory:
         if download_supplementary_tar_gz(pmc_id, directory):
             unpack_tar_gz(f"{directory}/{pmc_id}.tar.gz", f"{directory}/{pmc_id}")
             grouped_files = group_files(f"{directory}/{pmc_id}/{pmc_id}/")
             results = run_on_all_from_dict_and_return(pmc_id, grouped_files)
             return results
+
 
 # if __name__ == "__main__":
 #     pmc_id = "PMC8192451"

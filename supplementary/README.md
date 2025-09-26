@@ -12,8 +12,6 @@
 A general workflow of this project is divided into two steps:
 
 - fetching the data from the PMC website, transforming, and saving it in a unified format in the **output_examples**.
-- postprocessing the extensions from the **output_examples** and saving them. The **postprocessing/tables.py** does **variant search** in table saved extension supplementary material data.
-
 ### 1.2.2 Structure
 
 - **supplementary_format.json** - main input file for the project, contains all the information about the extensions and their corresponding URLs
@@ -31,12 +29,6 @@ A general workflow of this project is divided into two steps:
   - **extension/\*** - contains all the files downloaded from the website for a specific extension
 - **output_formatters/\***
   - **pandas_formatter.py** - contains the code for formatting the data processed by readers that use pandas DataFrames (_tables_), into a unified format
-- **postprocessing/**
-  - **tables.py** - contains the code for variant search in tables
-  - **intermediary_files/\*** - contains the **variant** and **pmcid** information used for variant search
-- **outputs/\***
-  - **PMCXXXXXX/\***
-    - **supplementary_material_extension** - contains the processed data (_the result from a reader class_)
 - **output_examples/\*** - contains the processed data (_the result from a reader class_)
 - **README.md** - this file
 

@@ -8,8 +8,12 @@ from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 from supplementary.readers.reader_interface import INPUT_TYPE, FormatReader
-from supplementary.utils.data_fetching import get_extension, get_material_name, get_pmcid
-from supplementary.utils.logging.logger_setup import supplementary_error_logger
+from supplementary.utils.data_fetching import (
+    get_extension,
+    get_material_name,
+    get_pmcid,
+)
+from utils.logging.logging_setup import supplementary_error_logger
 from supplementary.utils.result_saver import get_output_type, save
 
 
@@ -49,7 +53,9 @@ class PPTXFormatReader(FormatReader):
                         pptx_file = io.BytesIO(f.read())
                 except Exception as e:
                     # TODO: Implement error handling
-                    supplementary_error_logger.error("%s | %s", source, str(e), exc_info=True)
+                    supplementary_error_logger.error(
+                        "%s | %s", source, str(e), exc_info=True
+                    )
                     return None
         return self.read(pptx_file, type, source)
 

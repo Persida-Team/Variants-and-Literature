@@ -1,0 +1,9 @@
+downloaded_files/*
+**/__pycache__/
+/outputs/*
+/postprocessing/intermediary_files/pmcid_key_tables_value.json
+# /postprocessing/intermediary_files/*
+for_demo/*
+outputs*
+tests/pipeline_preprocessing_debugging/* 
+utils/logging/logging_config.json

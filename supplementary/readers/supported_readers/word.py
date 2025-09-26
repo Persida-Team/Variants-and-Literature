@@ -6,14 +6,19 @@ from tempfile import TemporaryDirectory
 
 import fitz  # imports the pymupdf library
 import pandas as pd
-import supplementary.utils.logging.error_templates as error_templates
+import utils.logging.error_templates as error_templates
 from supplementary.readers.reader_interface import INPUT_TYPE, FormatReader
 from supplementary.readers.supported_readers.pdf import process_pdf
-from supplementary.utils.data_fetching import get_extension, get_material_name, get_pmcid
-from supplementary.utils.logging.logger_setup import setup_logging
+from supplementary.utils.data_fetching import (
+    get_extension,
+    get_material_name,
+    get_pmcid,
+)
 from supplementary.utils.result_saver import get_output_type, save
-from utils.logging.logging_setup import supplementary_error_logger, supplementary_info_logger
-
+from utils.logging.logging_setup import (
+    supplementary_error_logger,
+    supplementary_info_logger,
+)
 
 MAX_FILE_SIZE = 25000000  # 25 MB
 LIBREOFFICE_TIMEOUT = 60 * 5  # 5 minutes
@@ -58,13 +63,19 @@ class WORDFormatReader(FormatReader):
                 with open(pdf_file, "rb") as f:
                     pdf_file = io.BytesIO(f.read())
             except subprocess.CalledProcessError as e:
-                supplementary_error_logger.error(error_templates.libreoffice_conversion_error(source))
+                supplementary_error_logger.error(
+                    error_templates.libreoffice_conversion_error(source)
+                )
                 return None
             except subprocess.TimeoutExpired as e:
-                supplementary_error_logger.error(error_templates.libreoffice_conversion_timeout(source))
+                supplementary_error_logger.error(
+                    error_templates.libreoffice_conversion_timeout(source)
+                )
                 return None
             except Exception as e:
-                supplementary_error_logger.error("%s | %s", source, str(e), exc_info=True)
+                supplementary_error_logger.error(
+                    "%s | %s", source, str(e), exc_info=True
+                )
                 return
         return self.process(pdf_file, input_type, source)
 

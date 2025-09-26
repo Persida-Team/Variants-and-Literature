@@ -1,36 +1,85 @@
-from supplementary.readers.reader_interface import INPUT_TYPE, FormatReader
-from supplementary.utils.data_fetching import get_extension, get_material_name, get_pmcid
-from supplementary.utils.result_saver import get_output_type, save
-from utils.logging.logging_setup import supplementary_error_logger
 import io
+from io import BytesIO
+
 import openpyxl
 import pandas as pd
+import xlrd
+from supplementary.readers.reader_interface import INPUT_TYPE, FormatReader
+from supplementary.utils.data_fetching import (
+    get_extension,
+    get_material_name,
+    get_pmcid,
+)
+from supplementary.utils.result_saver import get_output_type, save
+from utils.logging.logging_setup import supplementary_error_logger
 
 MAX_FILE_SIZE = 25000000  # 25 MB
+
+# def check_xlsx(file_bytes):
+#      # Load the workbook from the BytesIO object
+#     workbook = openpyxl.load_workbook(file_bytes, read_only=True)
+#     # Iterate through each sheet
+#     for sheet_name in workbook.sheetnames:
+#         sheet = workbook[sheet_name]
+
+#         # Get the first two rows (header and first data row)
+#         header_row = list(sheet.iter_rows(max_row=1, values_only=True))[0]
+#         first_data_row = list(
+#             sheet.iter_rows(min_row=2, max_row=2, values_only=True)
+#         )[0]
+#         # Compare the number of columns
+#         if len(first_data_row) > len(header_row) or len(first_data_row) > 15_000:
+#             return True  # Problematic file
+#     return False  # File is okay
+
+
+def extract_rows_from_xlsx(file_bytes: bytes):
+    if not hasattr(file_bytes, "read"):  # it's raw bytes
+        file_bytes = BytesIO(file_bytes)
+    workbook = openpyxl.load_workbook(file_bytes, read_only=True)
+    for sheet_name in workbook.sheetnames:
+        sheet = workbook[sheet_name]
+        if sheet.max_row < 2:
+            continue
+        header_row = list(sheet.iter_rows(max_row=1, values_only=True))[0]
+        first_data_row = list(sheet.iter_rows(min_row=2, max_row=2, values_only=True))[
+            0
+        ]
+        yield header_row, first_data_row
+
+
+def extract_rows_from_xls(file_bytes: bytes):
+    if hasattr(file_bytes, "read"):  # i.e. it's a BytesIO or similar
+        file_bytes = file_bytes.read()
+    book = xlrd.open_workbook(file_contents=file_bytes)
+    for sheet in book.sheets():
+        if sheet.nrows < 2:
+            continue
+        header_row = sheet.row_values(0)
+        first_data_row = sheet.row_values(1)
+        yield header_row, first_data_row
+
+
+def check_rows(header_row, first_data_row) -> bool:
+    return len(first_data_row) > len(header_row) or len(first_data_row) > 15_000
 
 
 def is_problematic_file(file_bytes, source):
     try:
-        # Load the workbook from the BytesIO object
-        workbook = openpyxl.load_workbook(file_bytes, read_only=True)
-
-        # Iterate through each sheet
-        for sheet_name in workbook.sheetnames:
-            sheet = workbook[sheet_name]
-
-            # Get the first two rows (header and first data row)
-            header_row = list(sheet.iter_rows(max_row=1, values_only=True))[0]
-            first_data_row = list(
-                sheet.iter_rows(min_row=2, max_row=2, values_only=True)
-            )[0]
-            # Compare the number of columns
-            if len(first_data_row) > len(header_row) or len(first_data_row) > 15_000:
-                return True  # Problematic file
-        return False  # File is okay
-
+        ext = source.split(".")[-1]
+        if ext == "xlsx":
+            data_to_compare = extract_rows_from_xlsx(file_bytes)
+        if ext == "xls":
+            data_to_compare = extract_rows_from_xls(file_bytes)
+        for header_row, first_data_row in data_to_compare:
+            if check_rows(header_row, first_data_row):
+                return True
+        return False
     except Exception as e:
         error_message = "Excel file is problematic, to many columns to read."
-        supplementary_error_logger.error("%s | %s | %s", source, error_message, str(e), exc_info=True)
+        supplementary_error_logger.error(
+            "%s | %s | %s", source, error_message, str(e), exc_info=True
+        )
         return True  # Treat as problematic if an error occurs
 
 
@@ -57,7 +106,9 @@ class EXCELFormatReader(FormatReader):
         file_size = len(byte_contents)
         if file_size > MAX_FILE_SIZE:
             error_message = f"FILE TO LARGE -> {file_size=:_}\t {MAX_FILE_SIZE=:_}"
-            supplementary_error_logger.error("%s | %s | %s", source, error_message, str(e), exc_info=True)
+            supplementary_error_logger.error(
+                "%s | %s | %s", source, error_message, str(e), exc_info=True
+            )
             return None
         xlsx_file = io.BytesIO(byte_contents)
         return self.process(xlsx_file, input_type, source)
@@ -76,7 +127,9 @@ class EXCELFormatReader(FormatReader):
             df = pd.read_excel(excel_file, sheet_name=None)
         except Exception as e:
             error_message = "Error reading the excel file."
-            supplementary_error_logger.error("%s | %s | %s", source, error_message, str(e), exc_info=True)
+            supplementary_error_logger.error(
+                "%s | %s | %s", source, error_message, str(e), exc_info=True
+            )
             return None
         for sheet_name, sheet in df.items():
             to_save[sheet_name] = sheet.to_string()

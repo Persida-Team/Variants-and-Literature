@@ -1,5 +1,9 @@
 from supplementary.readers.reader_interface import INPUT_TYPE, FormatReader
-from supplementary.utils.data_fetching import get_extension, get_material_name, get_pmcid
+from supplementary.utils.data_fetching import (
+    get_extension,
+    get_material_name,
+    get_pmcid,
+)
 from supplementary.utils.result_saver import get_output_type, save
 from utils.logging.logging_setup import supplementary_error_logger
 

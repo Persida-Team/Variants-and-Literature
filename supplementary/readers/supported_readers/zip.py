@@ -2,10 +2,13 @@ import io
 import zipfile
 from supplementary.readers.reader_interface import INPUT_TYPE, FormatReader
 from supplementary.readers.readers import SUPPORTED_EXTENSIONS, get_reader
-from supplementary.utils.data_fetching import get_extension, get_material_name, get_pmcid
+from supplementary.utils.data_fetching import (
+    get_extension,
+    get_material_name,
+    get_pmcid,
+)
 from supplementary.utils.result_saver import get_output_type, pack_result, save
 from utils.logging.logging_setup import supplementary_error_logger
-
 
 
 class ZIPFormatReader(FormatReader):
@@ -36,7 +39,9 @@ class ZIPFormatReader(FormatReader):
                     read_data = z.read(file)
 
                 except zipfile.BadZipFile as e:
-                    supplementary_error_logger.error("%s | %s", source, str(e), exc_info=True)
+                    supplementary_error_logger.error(
+                        "%s | %s", source, str(e), exc_info=True
+                    )
                     continue
                 result = reader.read_bytes(read_data, source)
                 to_save = pack_result(to_save, file, result, extension)

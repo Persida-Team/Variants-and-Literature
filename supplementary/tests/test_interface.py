@@ -19,6 +19,7 @@ from .. import variants_from_supplementary as vfs
 from ..utils.data_fetching import get_extension
 from ..utils.result_saver import get_output_type
 
+
 def read_all_documents(input_path: str, extension: str) -> list[str]:
     """
     Reads all documents (URLs, paths, or both) from the supplementary_format.json file

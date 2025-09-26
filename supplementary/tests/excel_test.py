@@ -30,12 +30,10 @@ def main():
         # "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3403905/bin/1471-2164-13-147-S6.xlsx",
         # "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3403905/bin/1471-2164-13-147-S11.xlsx",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9005588/bin/NIHMS1740908-supplement-Supplementary_Table_9.xlsx",
-        
     ]
-    
+
     y.run_test(inputs)
-    
-    
+
     # x.run_test(inputs)
 
     # start_xls_from = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3709075/bin/10552_2013_237_MOESM3_ESM.xls"
