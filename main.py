@@ -68,7 +68,7 @@ def do_one_article(pmc_id: str, submission_out_dir: str):
         main_info_logger.info(f"Submission file not in good format for {pmc_id}")
         return
 
-    # submit_one_article_from_w3c(pmc_id, w3c_document, submission_out_dir)
+    submit_one_article_from_w3c(pmc_id, w3c_document, submission_out_dir)
 
 
 def abc():
