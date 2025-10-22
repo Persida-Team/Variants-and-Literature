@@ -120,6 +120,27 @@
             ],
             "level": "INFO",
             "propagate": false
+        },
+        "w3c_body_logger": {
+            "handlers": [
+                "w3c_file_handler_body_error"
+            ],
+            "level": "ERROR",
+            "propagate": false
+        },
+        "submission_info_logger": {
+            "handlers": [
+                "submission_file_handler_info"
+            ],
+            "level": "INFO",
+            "propagate": false
+        },
+        "submission_error_logger": {
+            "handlers": [
+                "submission_file_handler_body_error"
+            ],
+            "level": "ERROR",
+            "propagate": false
         }
     }
 }
