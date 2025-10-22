@@ -141,6 +141,20 @@
             ],
             "level": "ERROR",
             "propagate": false
+        },
+        "main_info_logger": {
+            "handlers": [
+                "main_file_handler_info"
+            ],
+            "level": "INFO",
+            "propagate": false
+        },
+        "main_error_logger": {
+            "handlers": [
+                "main_file_handler_body_error"
+            ],
+            "level": "ERROR",
+            "propagate": false
         }
     }
 }
