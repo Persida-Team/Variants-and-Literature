@@ -15,7 +15,10 @@ from variant_search.search import (
 )
 from w3c.create_w3c_document import prepare_one_w3c
 from w3c.format_check import format_check
-from w3c.prepare_for_submittion import generate_submission_file, submit_one_article_from_w3c
+from w3c.prepare_for_submittion import (
+    generate_submission_file,
+    submit_one_article_from_w3c,
+)
 
 load_dotenv()
 
@@ -111,9 +114,10 @@ if __name__ == "__main__":
     with open(pmc_ids_file_path, "r") as fp:
         pmc_ids = fp.read().split("\n")
 
-    print(pmc_ids[:10])
     for index, pmc_id in enumerate(pmc_ids, 0):
         try:
+            main_info_logger.info(f"ID: {pmc_id}\tSTATUS: STARTED")
             do_one_article(pmc_id=pmc_id, submission_out_dir=OUTPUT_DIR)
+            main_info_logger.info(f"ID: {pmc_id}\tSTATUS: FINISHED")
         except Exception as e:
             main_error_logger.error(f"ID: {pmc_id}\tINDEX: {index}\t Exception: {e}")
