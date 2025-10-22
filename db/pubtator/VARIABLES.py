@@ -2,9 +2,10 @@ import os
 from contextlib import contextmanager
 
 from dontenv import load_dotenv
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from dotenv import load_dotenv()
+
 load_dotenv()
 
 generate_uri = (
