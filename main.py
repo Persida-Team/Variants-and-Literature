@@ -15,7 +15,7 @@ from variant_search.search import (
 )
 from w3c.create_w3c_document import prepare_one_w3c
 from w3c.format_check import format_check
-from w3c.prepare_for_submittion import generate_submission_file
+from w3c.prepare_for_submittion import generate_submission_file, submit_one_article_from_w3c
 
 load_dotenv()
 

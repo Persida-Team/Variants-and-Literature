@@ -164,6 +164,12 @@ def submission_all_data_in_folder(in_folder: str, out_folder: str, group: str):
             submission(pmc, data, out_folder, token, group)
 
 
+def submit_one_article_from_w3c(pmc_id, w3c_document, output_path):
+    group = "PMC" + pmc_id[3:-6].zfill(3) + "xxxxxx"
+    token = generate_token()
+    submission(pmc_id, w3c_document, output_path, token, group)
+
+
 def submit_something():
     OVERRIDE = True
     INPUT_PATH = "./results/300k/"
@@ -221,8 +227,10 @@ def submit_something():
         if (datetime.now() - token_time).days > 0:
             token = generate_token()
             token_time = datetime.now()
-            submission_info_logger.info("Token: " + token + "\n" + "Time: " + str(token_time))
-            
+            submission_info_logger.info(
+                "Token: " + token + "\n" + "Time: " + str(token_time)
+            )
+
         submission(pmc, data, OUTPUT_PATH, token, group)
 
 
@@ -248,7 +256,9 @@ def submit_directory(input_path, output_path):
             if (datetime.now() - token_time).days > 0:
                 token = generate_token()
                 token_time = datetime.now()
-                submission_info_logger.info("Token: " + token + "\n" + "Time: " + str(token_time))
+                submission_info_logger.info(
+                    "Token: " + token + "\n" + "Time: " + str(token_time)
+                )
 
             submission(file.split(".")[0], data, output_path, token, group)
 
