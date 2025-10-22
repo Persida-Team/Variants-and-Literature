@@ -3,19 +3,16 @@ import os
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
+from utils.logging.logging_setup import w3c_info_logger
 from w3c.article_info import (
     create_exact_based_on_pattern,
     create_starting_part_w3c,
     reformat_article_info_data,
 )
 from w3c.body import collect_w3c_body_per_pmcid, collect_w3c_body_per_pmcid_in_temp_dir
-
-from w3c.logger_config import setup_logger
 from w3c.supplementary import add_supplementary_data
 from w3c.target import add_table_data, create_target_table, create_target_text
 from w3c.utilities import load_json
-
-UTILITIES_LOGGER = setup_logger("create_w3c_document.log")
 
 
 def prepare_one_w3c_textual(one_variant: dict, pmcid: str, article_info: dict) -> list:
@@ -65,7 +62,7 @@ def prepare_one_w3c_tabular(sec_variant, pmcid, article_info):
 
 
 def prepare_one_w3c(data: dict, pmcid: str):
-    UTILITIES_LOGGER.info(f"Started preparing {pmcid}")
+    w3c_info_logger.info(f"Started preparing {pmcid}")
     result = []
     article_info = reformat_article_info_data(data)
     # collect_w3c_body_per_pmcid(data, pmcid)
@@ -89,7 +86,7 @@ def prepare_one_w3c(data: dict, pmcid: str):
             result += prepare_one_w3c_tabular(sec_variant, pmcid, article_info)
     if len(supplementaries) > 0:
         add_supplementary_data(pmcid, result, article_info, supplementaries)
-    UTILITIES_LOGGER.info(f"Finished preparing {pmcid}")
+    w3c_info_logger.info(f"Finished preparing {pmcid}")
     return result
 
 

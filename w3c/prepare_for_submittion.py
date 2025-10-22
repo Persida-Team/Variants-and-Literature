@@ -2,10 +2,11 @@ import os
 import time
 from datetime import datetime, timezone
 from json import JSONDecodeError
-import os
-from dotenv import load_dotenv
 
 import requests
+from dotenv import load_dotenv
+
+from utils.logging.logging_setup import submission_info_logger
 from w3c.utilities import (
     create_directory,
     create_uuid_for_submission,
@@ -13,17 +14,18 @@ from w3c.utilities import (
     load_json,
     save_json,
 )
+
 load_dotenv()
 
 
 TOKEN_GENERATOR = os.getenv("SUBMIT_TOKEN_GENERATOR", None)
 SUBMIT_URL = os.getenv("SUBMIT_URL", None)
 
-event_type= os.getenv("SUBMIT_EVENT_TYPE",None)
-event_name= os.getenv("SUBMIT_EVENT_NAME",None)
-event_triggered_by_host= os.getenv("SUBMIT_EVENT_TRIGGERED_BY_HOST",None)
-event_triggered_by_id= os.getenv("SUBMIT_EVENT_TRIGGERED_BY_ID",None)
-event_triggered_by_iri= os.getenv("SUBMIT_EVENT_TRIGGERED_BY_IRI",None)
+event_type = os.getenv("SUBMIT_EVENT_TYPE", None)
+event_name = os.getenv("SUBMIT_EVENT_NAME", None)
+event_triggered_by_host = os.getenv("SUBMIT_EVENT_TRIGGERED_BY_HOST", None)
+event_triggered_by_id = os.getenv("SUBMIT_EVENT_TRIGGERED_BY_ID", None)
+event_triggered_by_iri = os.getenv("SUBMIT_EVENT_TRIGGERED_BY_IRI", None)
 if not event_type:
     raise Exception("SUBMIT_EVENT_TYPE is not set in env file.")
 if not event_name:
@@ -34,6 +36,8 @@ if not event_triggered_by_id:
     raise Exception("SUBMIT_EVENT_TRIGGERED_BY_ID is not set in env file.")
 if not event_triggered_by_iri:
     raise Exception("SUBMIT_EVENT_TRIGGERED_BY_IRI is not set in env file.")
+
+
 def prepare_event(pmc: str):
     event = {}
     event["type"] = event_type
@@ -46,9 +50,7 @@ def prepare_event(pmc: str):
     event["triggered"]["by"] = {}
     event["triggered"]["by"]["host"] = event_name
     event["triggered"]["by"]["id"] = event_triggered_by_id
-    event["triggered"]["by"][
-        "iri"
-    ] = event_triggered_by_iri
+    event["triggered"]["by"]["iri"] = event_triggered_by_iri
     event["triggered"]["at"] = (
         datetime.now(timezone.utc)
         .isoformat(timespec="milliseconds")
@@ -67,25 +69,25 @@ def submit_result(data: dict, token: str, pmc: str, max_retries=5, timeout=60):
             )
             res = temp_res.json()
             status_message = str(res["status"]["code"])
-            with open("status_submission_log.txt", "a") as f:
-                f.writelines(
-                    f"{pmc} - Finished with status code: " + status_message + "\n"
-                )
+            submission_info_logger.info(
+                f"{pmc} - Finished with status code: " + status_message
+            )
+
             return res
 
         except requests.exceptions.Timeout as e:
-            with open("status_submission_log.txt", "a") as f:
-                f.writelines(f"{pmc} - Attempt {attempt + 1} - TimeoutError - {e}\n")
+            submission_info_logger.info(
+                f"{pmc} - Attempt {attempt + 1} - TimeoutError - {e}"
+            )
             if attempt < max_retries - 1:
                 time.sleep(2**attempt)  # Exponential backoff
             else:
                 raise
         except JSONDecodeError as e:
             status_message = f"JSONDecodeError - {e} - {temp_res}"
-            with open("status_submission_log.txt", "a") as f:
-                f.writelines(
-                    f"{pmc} - Finished with status code: " + status_message + "\n"
-                )
+            submission_info_logger.info(
+                f"{pmc} - Finished with status code: " + status_message
+            )
             return None
 
 
@@ -120,8 +122,7 @@ def submission(pmc: str, data: list, out_folder: str, token: str, group: str):
         #     with open (out_folder + pmc + "_error_response.json", "w") as fp:
         #         fp.write(response)
     else:
-        with open(f"{group}_submission_log.txt", "a") as f:
-            f.writelines(pmc + " - no valid annotations for submission.\n")
+        submission_info_logger.info(pmc + " - no valid annotations for submission.")
 
 
 def generate_submission_file(pmc: str, data: list) -> dict:
@@ -145,23 +146,21 @@ def submission_all_data_in_folder(in_folder: str, out_folder: str, group: str):
     create_directory(out_folder)
     token = generate_token()
     token_time = datetime.now()
-    with open(f"{group}_submission_log.txt", "a") as f:
-        f.writelines("Token: " + token + "\n")
-        f.writelines("Time: " + str(token_time) + "\n")
+    submission_info_logger.info("Token: " + token + "\n" + "Time: " + str(token_time))
     for link in files:
         for file in files[link]:
             pmc = file.split(".")[0]
             if os.path.exists(out_folder + pmc + "_submitted_response.json"):
                 continue
             data = load_json(link + file)
-            with open(f"{group}_submission_log.txt", "a") as f:
-                f.writelines(file + "\n")
+            submission_info_logger.info(file)
             if (datetime.now() - token_time).days > 0:
                 token = generate_token()
                 token_time = datetime.now()
-                with open(f"{group}_submission_log.txt", "a") as f:
-                    f.writelines("Token: " + token + "\n")
-                    f.writelines("Time: " + str(token_time) + "\n")
+                submission_info_logger.info(
+                    "Token: " + token + "\n" + "Time: " + str(token_time)
+                )
+
             submission(pmc, data, out_folder, token, group)
 
 
@@ -217,14 +216,13 @@ def submit_something():
         ):
             continue
         data = load_json(path_to_file)
-        with open(f"{group}_submission_log.txt", "a") as f:
-            f.writelines(pmc + "_w3c.json" + "\n")
+        submission_info_logger.info(pmc + "_w3c.json")
+
         if (datetime.now() - token_time).days > 0:
             token = generate_token()
             token_time = datetime.now()
-            with open(f"{group}_submission_log.txt", "a") as f:
-                f.writelines("Token: " + token + "\n")
-                f.writelines("Time: " + str(token_time) + "\n")
+            submission_info_logger.info("Token: " + token + "\n" + "Time: " + str(token_time))
+            
         submission(pmc, data, OUTPUT_PATH, token, group)
 
 
@@ -246,14 +244,11 @@ def submit_directory(input_path, output_path):
             #     continue
             data = load_json(os.path.join(root, file))
             group = "PMC" + file.split("_")[0][3:-6].zfill(3) + "xxxxxx"
-            with open(f"{group}_submission_log.txt", "a") as f:
-                f.writelines(file.split("_")[0] + "\n")
+            submission_info_logger.info(file.split("_")[0])
             if (datetime.now() - token_time).days > 0:
                 token = generate_token()
                 token_time = datetime.now()
-                with open(f"{group}_submission_log.txt", "a") as f:
-                    f.writelines("Token: " + token + "\n")
-                    f.writelines("Time: " + str(token_time) + "\n")
+                submission_info_logger.info("Token: " + token + "\n" + "Time: " + str(token_time))
 
             submission(file.split(".")[0], data, output_path, token, group)
 

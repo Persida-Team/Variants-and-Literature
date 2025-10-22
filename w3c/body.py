@@ -1,35 +1,30 @@
 import os
 import re
+
+from utils.logging.logging_setup import w3c_body_logger
 from w3c.logger_config import setup_logger
 from w3c.utilities import (
-    save_json,
-    load_existing_bodies,
-    append_to_existing_bodies,
-    create_directory,
-    get_results_caid,
-    get_results_rsid,
-    get_results_vcf_file,
-    register_new_indel,
-    get_results_txt_file,
-    get_results_allReg_hgvs,
-    REFSEQ,
-    PATTERNS_RS,
-    PATTERNS_CA,
-    PATTERNS_COMPLEX,
-    LOGGER,
     BODY_DIRECTORY,
     EXISTING_BODIES_PATH,
+    PATTERNS_CA,
+    PATTERNS_COMPLEX,
+    PATTERNS_RS,
+    REFSEQ,
+    append_to_existing_bodies,
+    create_directory,
+    get_results_allReg_hgvs,
+    get_results_caid,
+    get_results_rsid,
+    get_results_txt_file,
+    get_results_vcf_file,
+    load_existing_bodies,
+    register_new_indel,
+    save_json,
 )
 
-LOGGER = setup_logger("body.log")
 
-# REFSEQ = ["NC_000001.11", "NC_000002.12", "NC_000003.12", "NC_000004.12", "NC_000005.10", 
-#           "NC_000006.12", "NC_000007.14", "NC_000008.11", "NC_000009.12", "NC_000010.11", 
-#           "NC_000011.10", "NC_000012.12", "NC_000013.11", "NC_000014.9", "NC_000015.10", 
-#           "NC_000016.10", "NC_000017.11", "NC_000018.10", "NC_000019.10", "NC_000020.11", 
-#           "NC_000021.9", "NC_000022.11", "NC_000023.11", "NC_000024.10", "NC_012920.1"]
 
-def remove_temp_files(pmc_id: str) -> None: 
+def remove_temp_files(pmc_id: str) -> None:
     """
     Remove the VCF file.
     Args:
@@ -71,14 +66,9 @@ def add_row_in_vcf(chrom: str, pos: str, ref: str, alt: str, pmc_id: str) -> Non
     """
     try:
         with open(f"{pmc_id}_variants.vcf", "a") as vcf:
-            vcf.write(
-                f"{chrom}\t{pos}\t.\t{ref}\t{alt}\t.\t.\t.\n"
-            )
+            vcf.write(f"{chrom}\t{pos}\t.\t{ref}\t{alt}\t.\t.\t.\n")
     except Exception as e:
-        LOGGER.error(f"Error occurred while adding row in VCF: {e}")
-
-
-
+        w3c_body_logger.error(f"Error occurred while adding row in VCF: {e}")
 
 
 def read_data_from_vcf_file(pmc_id: str) -> list:
@@ -284,7 +274,8 @@ def reformat_data_for_body(data: dict) -> dict:
         temp["genes_symbol"] = list(temp_gene)
     return temp
 
-def collect_rsid_from_dbsnp(rsid:str):
+
+def collect_rsid_from_dbsnp(rsid: str):
     dbsnp_rsid = get_results_rsid(rsid[2:])
     # time.sleep(1)
     res = []
@@ -317,7 +308,6 @@ def collect_hgvs_from_allreg(hgvs: str) -> dict:
     if caid.startswith("_"):
         data = register_new_indel(hgvs)
     return reformat_data_for_body(data)
-
 
 
 def check_new_indels(data: list) -> list:
@@ -357,7 +347,6 @@ def check_new_indels(data: list) -> list:
                 res.append(temp)
     return res
 
-    
 
 def collect_missing_caids(data: list, pmc_id: str) -> list:
     """
@@ -378,12 +367,12 @@ def collect_missing_caids(data: list, pmc_id: str) -> list:
         indels = check_new_indels(data)
         if len(indels) > 0:
             res = indels
-        return res 
+        return res
     if any(alt not in valid_bases for alt in alts):
         indels = check_new_indels(data)
         if len(indels) > 0:
             res = indels
-        return res 
+        return res
     pos = data[0]["pos"]
     chrom = data[0]["chrom"]
     ref = data[0]["ref"]
@@ -455,7 +444,7 @@ def reformat_body_gene_part(in_data: dict) -> dict:
         temp["geneSymbol"] = in_data["genes_symbol"]
         temp["geneNCBI"] = in_data["genes_ncbi"]
     except KeyError:
-        LOGGER.error(
+        w3c_body_logger.error(
             f"Error occurred while reformatting gene part of body data. GENE SYMBOL or GENE NCBI not found. for {in_data}"
         )
         return {}
@@ -515,7 +504,7 @@ def prepare_body_caid(caid: str) -> None:
     response = get_results_caid(caid)
     res = reformat_data_for_body(response)
     body = [reformat_body_variant_part(res)]
-    if ("genes_ncbi" in res and len(res["genes_ncbi"]) > 0):
+    if "genes_ncbi" in res and len(res["genes_ncbi"]) > 0:
         body.append(reformat_body_gene_part(res))
     if not any(body):
         body = []
@@ -559,7 +548,7 @@ def prepare_body_complex(id: str, pmc_id: str) -> None:
             if res["alt"] == alt:
                 flag = True
                 body.append(reformat_body_variant_part(res))
-                if ("genes_ncbi" in res and len(res["genes_ncbi"]) > 0):
+                if "genes_ncbi" in res and len(res["genes_ncbi"]) > 0:
                     body.append(reformat_body_gene_part(res))
                 break
         if not flag:
@@ -596,9 +585,11 @@ def prepare_body_complex(id: str, pmc_id: str) -> None:
 
 def collect_w3c_body_per_pmcid_in_temp_dir(data: dict, pmc_id: str) -> None:
     import tempfile
+
     with tempfile.TemporaryDirectory() as temp_dir:
         collect_w3c_body_per_pmcid(data, pmc_id)
-        
+
+
 def collect_w3c_body_per_pmcid(data: dict, pmc_id: str) -> None:
     """
     Collects and prepares body data for each PMCID based on the results of variant search.
@@ -616,7 +607,7 @@ def collect_w3c_body_per_pmcid(data: dict, pmc_id: str) -> None:
         global_variants_raw = set()
         # create a new file for existing bodies
         save_json(list(global_variants), EXISTING_BODIES_PATH)
-        
+
     create_directory(BODY_DIRECTORY)
     need_body_rs, need_body_ca, need_body_complex = (
         find_exact_matches_of_rsid_caid_complex_type(data)
@@ -643,7 +634,7 @@ def collect_w3c_body_per_pmcid(data: dict, pmc_id: str) -> None:
     if variants_diff:
         for variant in variants_diff:
             append_to_existing_bodies(EXISTING_BODIES_PATH, variant)
-    
+
     remove_temp_files(pmc_id)
     # save_json(list(global_variants), EXISTING_BODIES_PATH)
 

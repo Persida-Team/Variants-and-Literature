@@ -11,8 +11,10 @@ from typing import Any
 from urllib.parse import quote
 
 import requests
-from w3c.logger_config import setup_logger
 from dotenv import load_dotenv
+
+from utils.logging.logging_setup import w3c_error_logger, w3c_info_logger
+from w3c.logger_config import setup_logger
 
 load_dotenv()
 
@@ -83,9 +85,6 @@ PATTERNS_COMPLEX = [
 ]
 
 
-LOGGER = setup_logger("utilities.log")
-
-
 def save_json(data: Any, file_path: str) -> None:
     """
     Save JSON data to a file.
@@ -98,12 +97,14 @@ def save_json(data: Any, file_path: str) -> None:
     if not isinstance(file_path, str) or not file_path:
         raise ValueError("Invalid filename. ")
     try:
-        LOGGER.info(f"Saving JSON to file: {file_path}. ")
+        w3c_info_logger.info(f"Saving JSON to file: {file_path}. ")
         with open(file_path, "w") as outfile:
             json.dump(data, outfile, indent=4)
-        LOGGER.info(f"JSON '{file_path}' saved successfully")
+        w3c_info_logger.info(f"JSON '{file_path}' saved successfully")
     except Exception as e:
-        LOGGER.error(f"An error occurred while saving the JSON file: {str(e)}")
+        w3c_error_logger.error(
+            f"An error occurred while saving the JSON file: {str(e)}"
+        )
         raise Exception(f"An error occurred while saving the JSON file. ")
 
 
@@ -120,13 +121,13 @@ def load_json(file_path: str) -> Any:
     if not isinstance(file_path, str) or not file_path:
         raise ValueError("Invalid filename. ")
     try:
-        LOGGER.info(f"Loading JSON from file: {file_path}. ")
+        w3c_info_logger.info(f"Loading JSON from file: {file_path}. ")
         with open(file_path) as f:
             data = json.load(f)
-        LOGGER.info(f"JSON '{file_path}' loaded successfully. ")
+        w3c_info_logger.info(f"JSON '{file_path}' loaded successfully. ")
         return data
     except Exception as e:
-        LOGGER.error(
+        w3c_error_logger.error(
             f"An error occurred while loading the JSON file: {str(e)}\n{traceback.format_exc()}\n\n"
         )
         raise Exception(f"An error occurred while loading the JSON file. ")
@@ -143,7 +144,9 @@ def load_existing_bodies(file_path: str):
         data = list(map(lambda x: x.strip("\n"), data))
         return data
     except Exception as e:
-        LOGGER.error(f"An error occurred while loading the existing bodies: {str(e)}")
+        w3c_error_logger.error(
+            f"An error occurred while loading the existing bodies: {str(e)}"
+        )
         raise Exception(f"An error occurred while loading the existing bodies. ")
 
 
@@ -170,13 +173,13 @@ def create_directory(destination: str) -> None:
         None
     """
     if os.path.isdir(destination):
-        # LOGGER.info(f"Directory '{destination}' already exists.")
+        # w3c_info_logger.info(f"Directory '{destination}' already exists.")
         return
     try:
         os.makedirs(destination)
-        LOGGER.info(f"Directory '{destination}' is created.")
+        w3c_info_logger.info(f"Directory '{destination}' is created.")
     except Exception as e:
-        LOGGER.error(f"Failed to create directory '{destination}': {str(e)}.")
+        w3c_error_logger.error(f"Failed to create directory '{destination}': {str(e)}.")
         raise Exception(f"Failed to create directory '{destination}'.")
 
 
@@ -193,12 +196,12 @@ def build_url(url: str, safe: str = SAFE_CHARACTERS) -> str:
         Exception: If an error occurs while building the URL.
     """
     if not isinstance(url, str) or not url:
-        LOGGER.error(f"Invalid URL: '{url}'")
+        w3c_error_logger.error(f"Invalid URL: '{url}'")
         raise ValueError("Invalid URL.")
     try:
         return quote(url, safe=safe)
     except Exception as e:
-        LOGGER.error(f"An error occurred while building the URL: {str(e)}")
+        w3c_error_logger.error(f"An error occurred while building the URL: {str(e)}")
         raise Exception("An error occurred while building the URL.")
 
 
@@ -214,9 +217,9 @@ def send_get_request(URL: str, params: dict = None) -> dict:
     with requests.get(
         url=build_url(URL), params=params, headers={"Accept": "application/json"}
     ) as r:
-        LOGGER.info(r.url)
+        w3c_info_logger.info(r.url)
         if r.status_code != 200:
-            LOGGER.error(
+            w3c_error_logger.error(
                 f"GET Request to '{r.url}' failed with status code {r.status_code}"
             )
             return {}
@@ -224,7 +227,7 @@ def send_get_request(URL: str, params: dict = None) -> dict:
         try:
             return r.json()
         except json.JSONDecodeError:
-            LOGGER.error(f"Response from {r.url} not a json!")
+            w3c_error_logger.error(f"Response from {r.url} not a json!")
             return {}
             # raise Exception(f"Response from {r.url} not a json!")
 
@@ -239,9 +242,9 @@ def send_post_request(URL: str, data: dict) -> dict:
         dict: The JSON response if it is a valid JSON.
     """
     with requests.post(url=build_url(URL), data=data) as r:
-        LOGGER.info(r.url)
+        w3c_info_logger.info(r.url)
         if r.status_code != 200:
-            LOGGER.error(
+            w3c_error_logger.error(
                 f"POST Request to '{r.url}' failed with status code {r.status_code}"
             )
             # raise Exception(f"Request failed with status code {r.status_code}")
@@ -249,7 +252,7 @@ def send_post_request(URL: str, data: dict) -> dict:
         try:
             return r.json()
         except:
-            LOGGER.error(f"Response from {r.url} not a json!")
+            w3c_error_logger.error(f"Response from {r.url} not a json!")
             return {}
             # raise Exception(f"Response from {r.url} not a json!")
 
@@ -282,14 +285,14 @@ def send_put_request(
             response = res.text
         # check status
         if res.status_code != 200:
-            LOGGER.error(
+            w3c_error_logger.error(
                 f"PUT Request to '{url}' failed with status code {res.status_code} for data: {data} and response: {response}"
             )
             return ""
             # raise Exception("Error for PUT requests: " + response)
         return response
     except requests.exceptions.RequestException as e:
-        LOGGER.error(f"An error occurred during the PUT request: {str(e)}")
+        w3c_error_logger.error(f"An error occurred during the PUT request: {str(e)}")
         return ""
         # raise Exception("An error occurred during the PUT request.")
 
@@ -302,7 +305,7 @@ def get_results_caid(caid: str) -> dict:
     Returns:
         dict: The JSON response for given CAID.
     """
-    LOGGER.info(f"Requesting CAIDs for {caid}")
+    w3c_info_logger.info(f"Requesting CAIDs for {caid}")
     return send_get_request(ONE_CAID_REQUEST + caid)
 
 
@@ -314,7 +317,7 @@ def get_results_rsid(rsid: str) -> list:
     Returns:
         list: The JSON response for given rsID.
     """
-    LOGGER.info(f"Requesting rsID data for {rsid}")
+    w3c_info_logger.info(f"Requesting rsID data for {rsid}")
     return send_get_request(ONE_RSID_REQUEST + rsid)
 
 
@@ -326,9 +329,8 @@ def get_results_mondo(id: str) -> dict:
     Returns:
         dict: The JSON response for given MESH.
     """
-    LOGGER.info(f"Requesting CAIDs for {id}")
+    w3c_info_logger.info(f"Requesting CAIDs for {id}")
     return send_get_request(ONE_MONDO_REQUEST + id)
-
 
 
 def get_results_vcf_file(pmc_id: str):
@@ -382,7 +384,7 @@ def get_results_allReg_hgvs(hgvs: str) -> list:
     Returns:
         list: The JSON response for given rsID.
     """
-    logging.info(f"Requesting HGVS data for {hgvs}")
+    w3c_info_logger.info(f"Requesting HGVS data for {hgvs}")
     return send_get_request(HGVS_REQUEST + hgvs)
 
 
@@ -394,7 +396,7 @@ def get_results_dbSNP_rsid(rsid: str) -> list:
     Returns:
         list: The JSON response for given rsID.
     """
-    logging.info(f"Requesting rsID data for {rsid}")
+    w3c_info_logger.info(f"Requesting rsID data for {rsid}")
     return send_get_request(DBSNP_RSID_REQUEST + rsid)
 
 
@@ -413,7 +415,7 @@ def get_files(outputs_folder: str) -> dict:
                 res[folder] = filename
         return res
     except Exception as e:
-        LOGGER.error(f"Error occurred while getting files: {e}")
+        w3c_error_logger.error(f"Error occurred while getting files: {e}")
         return {}
 
 

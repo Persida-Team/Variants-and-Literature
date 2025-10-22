@@ -5,27 +5,11 @@ import re
 import traceback
 from datetime import datetime
 from typing import Pattern
-import re
 
-# add basic logging with date and time function name
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
+from utils.logging.logging_setup import (
+    variant_search_error_logger,
+    variant_search_info_logger,
 )
-
-# create a logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-
-
-# save to a file
-file_handler = logging.FileHandler("300k_searching.log")
-file_handler.setLevel(logging.DEBUG)
-logger.addHandler(file_handler)
-formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-file_handler.setFormatter(formatter)
-
 
 METADATA_FIELDS = [
     "ids",
@@ -282,10 +266,7 @@ def do_one_article_parallel(article_path, variants, save_dir):
     try:
         do_one_article(article_path, variants, save_dir)
     except Exception as e:
-        print(f"Error while processing {pmc_id}: {e}")
-        # log the error into a file
-        with open(f"{save_dir}/error.txt", "a") as f:
-            f.write(f"{pmc_id}: {e}\n")
+        variant_search_error_logger.error(f"Error while processing {pmc_id}: {e}")
         return False
     return True
 
@@ -320,10 +301,6 @@ def do_all_parallel(
     return failed_number
 
 
-
-
-
-
 def extract_prefix_and_suffix(raw_text: str, variant: str, fragment_size: int = 400):
     """
     Using regex to find locations of exact match of variant in raw_text
@@ -356,6 +333,8 @@ def search_text(article_data, variants, available_textual_search_keys):
                 }
             )
     return result
+
+
 def find_exact_match_in_rows(table_rows, exact_match):
     rows_to_return = []
     for row in table_rows:
@@ -642,12 +621,12 @@ def do_one_article_w_diseases(
     if not os.path.exists(my_save_dir):
         os.makedirs(my_save_dir)
     # print(f"Processing {pmc_id}")
-    logger.log(logging.INFO, f"{pmc_id} - STARTED")
+    variant_search_info_logger.log(logging.INFO, f"{pmc_id} - STARTED")
     try:
         do_one_article(
             my_article_path,
             variants,
-            my_save_dir,
+            # my_save_dir,
             my_supplementary_dir,
             data_to_persist,
         )
@@ -655,10 +634,10 @@ def do_one_article_w_diseases(
         #     f"{my_save_dir}/{pmc_id}_searched.json", my_article_path, True
         # )
     except Exception as e:
-        logger.error(f"{pmc_id} - {e}\n")
+        variant_search_error_logger.error(f"{pmc_id} - {e}\n")
         # logger.error(f"{pmc_id} - {traceback.format_exc()}\n")
         return False
-    logger.log(logging.INFO, f"{pmc_id} - ENDED")
+    variant_search_info_logger.log(logging.INFO, f"{pmc_id} - ENDED")
     return True
 
 
@@ -684,7 +663,7 @@ def do_one_article_w_diseases_automation_paths(
     my_save_dir = os.path.join(save_dir, pmc_group)
     if not os.path.exists(my_save_dir):
         os.makedirs(my_save_dir)
-    logger.log(logging.INFO, f"{pmc_id} - STARTED")
+    variant_search_info_logger.log(logging.INFO, f"{pmc_id} - STARTED")
     try:
         do_one_article(
             my_article_path,
@@ -697,10 +676,10 @@ def do_one_article_w_diseases_automation_paths(
         #     f"{my_save_dir}/{pmc_id}_searched.json", my_article_path, True
         # )
     except Exception as e:
-        logger.error(f"{pmc_id} - {e}\n")
+        variant_search_error_logger.error(f"{pmc_id} - {e}\n")
         # logger.error(f"{pmc_id} - {traceback.format_exc()}\n")
         return False
-    logger.log(logging.INFO, f"{pmc_id} - ENDED")
+    variant_search_info_logger.log(logging.INFO, f"{pmc_id} - ENDED")
     return True
 
 
@@ -730,7 +709,7 @@ def do_one_article_w_diseases_automation(
     # save_dir: str,
 ):
     if not pubtator_data:
-        logger.log(logging.INFO, f"{pmc_id} - NO PUBTATOR DATA")
+        variant_search_info_logger.log(logging.INFO, f"{pmc_id} - NO PUBTATOR DATA")
         return {}
     variants = list(map(lambda x: x[1], pubtator_data["variant"]))
     data_to_persist = {
@@ -743,7 +722,7 @@ def do_one_article_w_diseases_automation(
     # my_save_dir = os.path.join(save_dir, pmc_group)
     # if not os.path.exists(my_save_dir):
     #     os.makedirs(my_save_dir)
-    logger.log(logging.INFO, f"{pmc_id} - STARTED")
+    variant_search_info_logger.log(logging.INFO, f"{pmc_id} - STARTED")
     result = {}
 
     try:
@@ -790,10 +769,10 @@ def do_one_article_w_diseases_automation(
         #     f"{my_save_dir}/{pmc_id}_searched.json", my_article_path, True
         # )
     except Exception as e:
-        logger.error(f"{pmc_id} - {e}\n")
+        variant_search_error_logger.error(f"{pmc_id} - {e}\n")
         # logger.error(f"{pmc_id} - {traceback.format_exc()}\n")
         return False
-    logger.log(logging.INFO, f"{pmc_id} - ENDED")
+    variant_search_info_logger.log(logging.INFO, f"{pmc_id} - ENDED")
     return result
 
 
