@@ -11,56 +11,91 @@
             "class": "logging.FileHandler",
             "formatter": "standard",
             "level": "ERROR",
-            "filename": "/home/novak/Clingen/pipeline_logs/supplementary/ERROR.log",
+            "filename": "",
             "mode": "a"
         },
         "supplementary_file_handler_info": {
             "class": "logging.FileHandler",
             "formatter": "standard",
             "level": "INFO",
-            "filename": "/home/novak/Clingen/pipeline_logs/supplementary/INFO.log",
+            "filename": "",
             "mode": "a"
         },
         "parsing_file_handler_error": {
             "class": "logging.FileHandler",
             "formatter": "standard",
             "level": "ERROR",
-            "filename": "/home/novak/Clingen/pipeline_logs/parsing/ERROR.log",
+            "filename": "",
             "mode": "a"
         },
         "parsing_file_handler_info": {
             "class": "logging.FileHandler",
             "formatter": "standard",
             "level": "INFO",
-            "filename": "/home/novak/Clingen/pipeline_logs/parsing/INFO.log",
+            "filename": "",
             "mode": "a"
         },
         "variant_search_file_handler_error": {
             "class": "logging.FileHandler",
             "formatter": "standard",
             "level": "ERROR",
-            "filename": "/home/novak/Clingen/pipeline_logs/variant_search/ERROR.log",
+            "filename": "",
             "mode": "a"
         },
         "variant_search_file_handler_info": {
             "class": "logging.FileHandler",
             "formatter": "standard",
             "level": "INFO",
-            "filename": "/home/novak/Clingen/pipeline_logs/variant_search/INFO.log",
+            "filename": "",
             "mode": "a"
         },
         "w3c_file_handler_error": {
             "class": "logging.FileHandler",
             "formatter": "standard",
             "level": "ERROR",
-            "filename": "/home/novak/Clingen/pipeline_logs/w3c/ERROR.log",
+            "filename": "",
             "mode": "a"
         },
         "w3c_file_handler_info": {
             "class": "logging.FileHandler",
             "formatter": "standard",
             "level": "INFO",
-            "filename": "/home/novak/Clingen/pipeline_logs/w3c/INFO.log",
+            "filename": "",
+            "mode": "a"
+        },
+        "w3c_file_handler_body_error": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "ERROR",
+            "filename": "",
+            "mode": "a"
+        },
+        "submission_file_handler_info": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "INFO",
+            "filename": "",
+            "mode": "a"
+        },
+        "submission_file_handler_body_error": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "ERROR",
+            "filename": "",
+            "mode": "a"
+        },
+        "main_file_handler_info": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "INFO",
+            "filename": "",
+            "mode": "a"
+        },
+        "main_file_handler_body_error": {
+            "class": "logging.FileHandler",
+            "formatter": "standard",
+            "level": "ERROR",
+            "filename": "",
             "mode": "a"
         }
     },
@@ -126,7 +161,7 @@
                 "w3c_file_handler_body_error"
             ],
             "level": "ERROR",
-            "propagate": false
+            "propagate": true
         },
         "submission_info_logger": {
             "handlers": [
@@ -140,7 +175,7 @@
                 "submission_file_handler_body_error"
             ],
             "level": "ERROR",
-            "propagate": false
+            "propagate": true
         },
         "main_info_logger": {
             "handlers": [
@@ -154,7 +189,7 @@
                 "main_file_handler_body_error"
             ],
             "level": "ERROR",
-            "propagate": false
+            "propagate": true
         }
     }
 }

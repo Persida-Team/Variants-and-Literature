@@ -12,7 +12,6 @@ from urllib.parse import quote
 
 import requests
 from dotenv import load_dotenv
-
 from utils.logging.logging_setup import w3c_error_logger, w3c_info_logger
 from w3c.logger_config import setup_logger
 
@@ -96,10 +95,10 @@ def save_json(data: Any, file_path: str) -> None:
     """
     if not isinstance(file_path, str) or not file_path:
         raise ValueError("Invalid filename. ")
+    with open(file_path, "w") as outfile:
+        json.dump(data, outfile, indent=4)
     try:
         w3c_info_logger.info(f"Saving JSON to file: {file_path}. ")
-        with open(file_path, "w") as outfile:
-            json.dump(data, outfile, indent=4)
         w3c_info_logger.info(f"JSON '{file_path}' saved successfully")
     except Exception as e:
         w3c_error_logger.error(

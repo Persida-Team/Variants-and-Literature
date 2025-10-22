@@ -234,9 +234,9 @@ def format_check(data: dict):
         return True
     except ValidationError as e:
         # print(f"Validation error: {e.message}")
-        with open("format_check_errors.txt", "a") as f:
-            f.write(f"Validation error: {e.message}\n")
-            f.write(f"Error details: {e}\n")
+        # with open("format_check_errors.txt", "a") as f:
+        #     f.write(f"Validation error: {e.message}\n")
+        #     f.write(f"Error details: {e}\n")
         return False
 
 

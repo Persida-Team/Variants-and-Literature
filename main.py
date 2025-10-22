@@ -3,10 +3,9 @@ import os
 from parser.combined_parsing import combine_xml_and_txt_no_save
 
 import pandas as pd
-from dotenv import load_dotenv
-
 from db.pubtator.db_queries import get_full_related_data
 from db.pubtator.VARIABLES import get_session
+from dotenv import load_dotenv
 from supplementary.tests.pipeline_preprocessing import parse_supplementary_for_pmc_id
 from utils.logging.logging_setup import main_error_logger, main_info_logger
 from variant_search.search import (
@@ -116,8 +115,6 @@ if __name__ == "__main__":
 
     for index, pmc_id in enumerate(pmc_ids, 0):
         try:
-            main_info_logger.info(f"ID: {pmc_id}\tSTATUS: STARTED")
             do_one_article(pmc_id=pmc_id, submission_out_dir=OUTPUT_DIR)
-            main_info_logger.info(f"ID: {pmc_id}\tSTATUS: FINISHED")
         except Exception as e:
             main_error_logger.error(f"ID: {pmc_id}\tINDEX: {index}\t Exception: {e}")
