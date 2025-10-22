@@ -1,10 +1,14 @@
 import json
+import os
 from parser.combined_parsing import combine_xml_and_txt_no_save
 
 import pandas as pd
+from dotenv import load_dotenv
+
 from db.pubtator.db_queries import get_full_related_data
 from db.pubtator.VARIABLES import get_session
 from supplementary.tests.pipeline_preprocessing import parse_supplementary_for_pmc_id
+from utils.logging.logging_setup import main_error_logger, main_info_logger
 from variant_search.search import (
     do_one_article_w_diseases_automation,
     raw_search_one_article,
@@ -12,12 +16,15 @@ from variant_search.search import (
 from w3c.create_w3c_document import prepare_one_w3c
 from w3c.format_check import format_check
 from w3c.prepare_for_submittion import generate_submission_file
-from dotenv import load_dotenv
-import os 
+
 load_dotenv()
+
 OUTPUT_DIR = os.getenv("PIPELINE_OUTPUT_DIR", None)
+UNCOMPRESSED_ARTICLES_DIR = os.getenv("UNCOMPRESSED_ARTICLES_DIR", None)
 if not OUTPUT_DIR:
     raise Exception("PIPELINE_OUTPUT_DIR variable not set in env file.")
+if not UNCOMPRESSED_ARTICLES_DIR:
+    raise Exception("UNCOMPRESSED_ARTICLES_DIR variable not set in env file.")
 
 
 def generate_path(pmc_id: str) -> str:
@@ -25,10 +32,10 @@ def generate_path(pmc_id: str) -> str:
     Generate the path prefix for the XML and TXT files based on the PMC ID.
     """
     pmc_group = "PMC" + pmc_id[3:-6].zfill(3) + "xxxxxx"
-    return f"/home/novak/Clingen/PMC_articles/bulk/uncompressed/{pmc_group}/{pmc_id}"
+    return f"{UNCOMPRESSED_ARTICLES_DIR}/{pmc_group}/{pmc_id}"
 
 
-def do_one_article(pmc_id: str):
+def do_one_article(pmc_id: str, submission_out_dir: str):
     path_prefix = generate_path(pmc_id)
     xml_path = path_prefix + ".xml"
     txt_path = path_prefix + ".txt"
@@ -36,7 +43,7 @@ def do_one_article(pmc_id: str):
     try:
         text_parsing_result = combine_xml_and_txt_no_save(xml_path, txt_path)
     except FileNotFoundError:
-        print(f"Files for {pmc_id} not found. Skipping.")
+        main_info_logger.info(f"Files for {pmc_id} not found. Skipping.")
         return
 
     supplementary_parsing_results = parse_supplementary_for_pmc_id(pmc_id)
@@ -52,55 +59,19 @@ def do_one_article(pmc_id: str):
         pubtator_data=pubtator_data,
     )
     if not searched_data:
+        main_info_logger.info(f"No searched data for {pmc_id}.")
         return
-    # TODO: generate w3c
+
     w3c_document = prepare_one_w3c(searched_data, pmc_id)
     submission_file = generate_submission_file(pmc_id, w3c_document)
-    # with open(OUTPUT_DIR + f"{pmc_id}_parsed_data.json", "w") as f:
-    #     json.dump(text_parsing_result, f, indent=4)
-    # with open(OUTPUT_DIR + f"{pmc_id}_searched_data.json", "w") as f:
-    #     json.dump(searched_data, f, indent=4)
-    # with open(OUTPUT_DIR + f"{pmc_id}_w3c_document_for_submission.json", "w") as f:
-    #     json.dump(submission_file, f, indent=4)
-    # with open(OUTPUT_DIR + f"{pmc_id}_w3c_document.json", "w") as f:
-    #     json.dump(w3c_document, f, indent=4)
-    # with open(OUTPUT_DIR + f"{pmc_id}_pubtator.json", "w") as f:
-    #     json.dump(pubtator_data, f, indent=4)
-    # print(submission_file)
-    # print(format_check(submission_file))
     if not format_check(submission_file):
-        print("OBJECT NOT IN GOOD FORMAT: TODO: something about this")
+        main_info_logger.info(f"Submission file not in good format for {pmc_id}")
         return
 
-    # w3c_document = generate_w3c_document(searched_data, ...)
-    # submit_w3c_document(w3c_document, ...)
-    # TODO: submit
-
-    with open(OUTPUT_DIR + f"{pmc_id}_w3c_document_for_submission.json", "w") as f:
-        json.dump(submission_file, f, indent=4)
+    # submit_one_article_from_w3c(pmc_id, w3c_document, submission_out_dir)
 
 
-# x = parse_supplementary_for_pmc_id("PMC4826182")
-# print(x.keys())
-
-# if __name__ == "__main__":
-#     pmc_ids = [
-#     "PMC4580381",
-#     "PMC7569700",
-#     "PMC8180858",
-#     ]
-#     OUTPUT_DIR = "/home/novak/Clingen/repo_to_send/test_outputs/some_missing_w3c_files/"
-#     for i, pmc_id in enumerate(pmc_ids,1):
-#         # if i > 1:
-#         #     break
-#         do_one_article(pmc_id)
-        
-# def abc():
-if __name__ == "__main__":
-    # import time
-    # for i in range(600):
-    #     print(f"waiting\t{i}/600", end="\r")
-    #     time.sleep(1)
+def abc():
     input_output = [
         (
             "/home/novak/Clingen/repo_to_send/test_outputs/pmc_list_512_articles_with_ours_null",
@@ -112,6 +83,9 @@ if __name__ == "__main__":
         ),
     ]
     for INPUT_DIR, OUTPUT_DIR in input_output:
+        # from w3c.prepare_for_submittion import submit_directory
+        # submit_directory(OUTPUT_DIR, OUTPUT_DIR)
+
         with open(
             INPUT_DIR,
             "r",
@@ -124,6 +98,22 @@ if __name__ == "__main__":
             #     break
             # if pmc_id != "PMC1702556":
             #     continue
-            do_one_article(pmc_id)
+            do_one_article(pmc_id, OUTPUT_DIR)
 
     # do_one_article("PMC1702556")
+
+
+if __name__ == "__main__":
+    print("main done")
+    pmc_ids_file_path = (
+        "/home/novak/Clingen/PMC_articles/bulk/uncompressed/all_pmc_ids_22_10_2025.txt"
+    )
+    with open(pmc_ids_file_path, "r") as fp:
+        pmc_ids = fp.read().split("\n")
+
+    print(pmc_ids[:10])
+    for index, pmc_id in enumerate(pmc_ids, 0):
+        try:
+            do_one_article(pmc_id=pmc_id, submission_out_dir=OUTPUT_DIR)
+        except Exception as e:
+            main_error_logger.error(f"ID: {pmc_id}\tINDEX: {index}\t Exception: {e}")
