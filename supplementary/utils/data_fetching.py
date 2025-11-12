@@ -152,7 +152,7 @@ def save_file_to_disc(destination_directory: str, url: str, byte_content) -> Non
 
 def fetch_file(
     url,
-    destination_directory=get_env_or_fail("DOWNLOAD_DESTINATION_DIRECTORY"),
+    destination_directory=get_env_or_fail("SUPPLEMENTARY_DOWNLOAD_DIRECTORY"),
     save_to_disc=False,
 ) -> bytes | None:
     """
@@ -164,7 +164,7 @@ def fetch_file(
     url : str
         The URL to fetch the file from
     destination_directory : str, optional
-        The directory to save the file to, by default DOWNLOAD_DESTINATION_DIRECTORY
+        The directory to save the file to, by default SUPPLEMENTARY_DOWNLOAD_DIRECTORY
     save_to_disc : bool, optional
         Whether to save the file to disc, by default False
 
