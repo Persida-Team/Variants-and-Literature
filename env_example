@@ -1,0 +1,23 @@
+LOGGING_CONFIG_PATH="path/to/Variants-and-Literature/utils/logging/logging_config.json"
+LOGGING_OUTPUT_PATH="path/to/pipeline_logs/"
+SUPPLEMENTARY_DOWNLOAD_DIRECTORY="path/to/supplementary/download/"
+BODY_DIRECTORY="path/to/where/to/save/previously_processed/w3c_bodies/"
+EXISTING_BODIES_PATH="path/to/where/to/save/previously_processed/w3c_bodies_list.txt"
+UNCOMPRESSED_ARTICLES_DIR="path/from/where/to/read/txt_xml/article/uncompressed/data/"
+PIPELINE_OUTPUT_DIR="path/to/save/submitted/data/"
+
+DB_USER="db_username"
+DB_PASSWORD="db_password"
+DB_HOST="localhost"
+DB_PORT="5432"
+DB_NAME="db_name"
+DB_INPUT_PREFIX_DIR="path/to/db/pubtator/input_samples/"
+SUBMIT_TOKEN_GENERATOR="https://genboree.org/auth/usr/your_token_generator_path"
+SUBMIT_URL="submission/url/provided/by/ClinGen" # ask ClinGen for it
+SUBMIT_EVENT_TYPE="submit event type"           # ask ClinGen for it
+SUBMIT_EVENT_NAME="submit event name"           # ask ClinGen for it
+SUBMIT_EVENT_TRIGGERED_BY_HOST="submitter host identifier"
+SUBMIT_EVENT_TRIGGERED_BY_ID="ldh_excerpt_http2pulsar"
+SUBMIT_EVENT_TRIGGERED_BY_IRI="https://github.com/BRL-BCM/ldh_excerpt_http2pulsar"
+W3C_LOGIN="ClinGen credentials"
+W3C_PASSWORD="ClinGen credentials"
